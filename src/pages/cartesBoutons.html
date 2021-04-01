@@ -1,0 +1,1782 @@
+<!-- Boutons avec style insérer dans un attribut style -->
+<div class="grid-container">
+    <!-- Titres -->
+    <div class="grid-x ">
+        <div class="cell">
+            <h3 class="text-underline">Boutons customisés :</h3>
+            <p> Pour insérer un effet de bouton, il suffit d'utiliser la classe associée à celui-ci. Les classes sont
+                indiquées en titre des cartes.</p>
+            <p>Pour utiliser les classes de boutons qui suivent, il est INDISPENSABLE d'ajouter une classe de palette
+                dans le HTML. Par exemple : <code
+                    style="color: midnightblue; background-color: whitesmoke; "><strong>primary</strong>
+                    btn-1-full</code>. Cette classe correspond à la couleur de palette associée ($color-palette). </p>
+            <p>La classe <code style="color: midnightblue; background-color: whitesmoke; ">.button</code> (classe de
+                base des boutons dans Zurb Foundation) doit être ignorée lorsqu'on ajout une
+                classe issue de la bibliothèque ci-dessous.</p>
+            <p>Remarque : Les classes suivantes peuvent avoir un comportement inattendu lorsque la classe <code
+                    style="color: midnightblue; background-color: whitesmoke; ">.button</code> de
+                Zurb Foundation est insérée sur la même balise HTML.</p>
+            <!-- <p>Le style <i>full</i> correspond à un background de couleur au survol, le style <i>empty</i> a un background transparent.</p> -->
+        </div>
+
+    </div>
+
+    <!-- Ensemble de cartes 1 -->
+    <div class="grid-x grid-padding-x">
+        <div class="cell">
+            <h4 class="text-underline">1. Les boutons passent du style <i>full</i> à <i>empty</i> et vice-versa</h4>
+        </div>
+
+        <!-- Bouton 1 -->
+        <div class="cell medium-6">
+            <!-- .btn-1-full -->
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-1-full</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b; height: 5em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-1-full">Exemple</a>
+                        <a class="secondary btn-1-full">Exemple</a>
+                        <a class="success btn-1-full">Exemple</a>
+                        <a class="warning btn-1-full">Exemple</a>
+                        <a class="alert btn-1-full">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section text-center" style="height: 28em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-1-full">Exemple</a>
+                        <a class="secondary btn-1-full">Exemple</a>
+                        <a class="success btn-1-full">Exemple</a>
+                        <a class="warning btn-1-full">Exemple</a>
+                        <a class="alert btn-1-full">Exemple</a>
+                    </div>
+                    <hr>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Caractéristiques :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-color*</li>
+                                <li>Bg : palette</li>
+                                <li>Border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Au survol :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : palette</li>
+                                <li>Bg : transparent</li>
+                                <li>Border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>Bouton au fond couleur palette. Il passe en transparence au survol.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Bouton 2 -->
+        <div class="cell medium-6">
+            <!-- .btn-1-empty -->
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-1-empty
+                    </h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b; height: 5em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-1-empty">Exemple</a>
+                        <a class="secondary btn-1-empty">Exemple</a>
+                        <a class="success btn-1-empty">Exemple</a>
+                        <a class="warning btn-1-empty">Exemple</a>
+                        <a class="alert btn-1-empty">Exemple</a>
+                    </div>
+                </div>
+
+
+                <div class="card-section text-center" style="height: 28em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-1-empty">Exemple</a>
+                        <a class="secondary btn-1-empty">Exemple</a>
+                        <a class="success btn-1-empty">Exemple</a>
+                        <a class="warning btn-1-empty">Exemple</a>
+                        <a class="alert btn-1-empty">Exemple</a>
+                    </div>
+                    <hr>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Caractéristiques :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : palette</li>
+                                <li>Bg : transparent</li>
+                                <li>Border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Au survol :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : palette</li>
+                                <li>Bg : $button-color*</li>
+                                <li>Border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>Bouton au fond transparent, texte couleur palette. Il passe en bouton plein en conservant ses
+                        couleurs au survol.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton 1 bis -->
+        <div class="cell medium-6">
+            <!-- .btn-1-full-border-plain -->
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-1-full-border-plain</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b; height: 5em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-1-full-border-plain">Exemple</a>
+                        <a class="secondary btn-1-full-border-plain">Exemple</a>
+                        <a class="success btn-1-full-border-plain">Exemple</a>
+                        <a class="warning btn-1-full-border-plain">Exemple</a>
+                        <a class="alert btn-1-full-border-plain">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section text-center" style="height: 28em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-1-full-border-plain">Exemple</a>
+                        <a class="secondary btn-1-full-border-plain">Exemple</a>
+                        <a class="success btn-1-full-border-plain">Exemple</a>
+                        <a class="warning btn-1-full-border-plain">Exemple</a>
+                        <a class="alert btn-1-full-border-plain">Exemple</a>
+                    </div>
+                    <hr>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Caractéristiques :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-color*</li>
+                                <li>Bg : palette</li>
+                                <li>Border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Au survol :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : palette</li>
+                                <li>Bg : transparent</li>
+                                <li>Border : $button-border-color-hover</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>Bouton au fond couleur palette. Il passe en transparence au survol. Style de bordure unique pour
+                        tous les boutons.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Bouton 2 bis-->
+        <div class="cell medium-6">
+            <!-- .btn-1-empty-border-plain -->
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-1-empty-border-plain
+                    </h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b; height: 5em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-1-empty-border-plain">Exemple</a>
+                        <a class="secondary btn-1-empty-border-plain">Exemple</a>
+                        <a class="success btn-1-empty-border-plain">Exemple</a>
+                        <a class="warning btn-1-empty-border-plain">Exemple</a>
+                        <a class="alert btn-1-empty-border-plain">Exemple</a>
+                    </div>
+                </div>
+
+
+                <div class="card-section text-center" style="height: 28em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-1-empty-border-plain">Exemple</a>
+                        <a class="secondary btn-1-empty-border-plain">Exemple</a>
+                        <a class="success btn-1-empty-border-plain">Exemple</a>
+                        <a class="warning btn-1-empty-border-plain">Exemple</a>
+                        <a class="alert btn-1-empty-border-plain">Exemple</a>
+                    </div>
+                    <hr>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Caractéristiques :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : palette</li>
+                                <li>Bg : transparent</li>
+                                <li>Border : $button-border-color-hover</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Au survol :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : palette</li>
+                                <li>Bg : $button-color*</li>
+                                <li>Border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>Bouton au fond transparent, texte couleur palette. Il passe en bouton plein en conservant ses
+                        couleurs au survol. Style de bordure unique pour tous les boutons.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ensemble de cartes 2 -->
+    <div class="grid-x grid-padding-x">
+        <div class="cell">
+            <h4 class="text-underline">2. Les boutons ont un fond uni, et conservent la bordure de la couleur de la
+                palette
+                au survol</h4>
+        </div>
+
+        <!-- Bouton 3 -->
+        <div class="cell medium-6">
+            <!-- .btn-2-full -->
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-2-full</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b; height: 5em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-2-full">Exemple</a>
+                        <a class="secondary btn-2-full">Exemple</a>
+                        <a class="success btn-2-full">Exemple</a>
+                        <a class="warning btn-2-full">Exemple</a>
+                        <a class="alert btn-2-full">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section text-center" style="height: 28em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-2-full">Exemple</a>
+                        <a class="secondary btn-2-full">Exemple</a>
+                        <a class="success btn-2-full">Exemple</a>
+                        <a class="warning btn-2-full">Exemple</a>
+                        <a class="alert btn-2-full">Exemple</a>
+                    </div>
+                    <hr>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Caractéristiques :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-background-hover</li>
+                                <li>Bg : palette</li>
+                                <li>Border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Au survol :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : palette</li>
+                                <li>Bg : $button-background-hover</li>
+                                <li>Border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p> Au survol, la couleur de la police devient la couleur du fond.
+                        La couleur du fond est identique pour tous les boutons. La police prend la couleur de la
+                        palette. </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton 4 -->
+        <div class="cell medium-6">
+            <!-- .btn-2-empty -->
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-2-empty</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b; height: 5em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-2-empty">Exemple</a>
+                        <a class="secondary btn-2-empty">Exemple</a>
+                        <a class="success btn-2-empty">Exemple</a>
+                        <a class="warning btn-2-empty">Exemple</a>
+                        <a class="alert btn-2-empty">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section text-center" style="height: 28em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-2-empty">Exemple</a>
+                        <a class="secondary btn-2-empty">Exemple</a>
+                        <a class="success btn-2-empty">Exemple</a>
+                        <a class="warning btn-2-empty">Exemple</a>
+                        <a class="alert btn-2-empty">Exemple</a>
+                    </div>
+                    <hr>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Caractéristiques :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : palette</li>
+                                <li>Bg : transparent</li>
+                                <li>Border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Au survol :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : palette</li>
+                                <li>Bg : $button-background-hover</li>
+                                <li>Border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>
+                        Au survol, la couleur du fond est identique pour tous les boutons. La couleur de la police reste
+                        celle de la palette.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton 3 bis-->
+        <div class="cell medium-6">
+            <!-- .btn-2-full-border-plain -->
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-2-full-border-plain</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b; height: 5em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-2-full-border-plain">Exemple</a>
+                        <a class="secondary btn-2-full-border-plain">Exemple</a>
+                        <a class="success btn-2-full-border-plain">Exemple</a>
+                        <a class="warning btn-2-full-border-plain">Exemple</a>
+                        <a class="alert btn-2-full-border-plain">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section text-center" style="height: 28em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-2-full-border-plain">Exemple</a>
+                        <a class="secondary btn-2-full-border-plain">Exemple</a>
+                        <a class="success btn-2-full-border-plain">Exemple</a>
+                        <a class="warning btn-2-full-border-plain">Exemple</a>
+                        <a class="alert btn-2-full-border-plain">Exemple</a>
+                    </div>
+                    <hr>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Caractéristiques :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-background-hover</li>
+                                <li>Bg : palette</li>
+                                <li>Border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Au survol :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : palette</li>
+                                <li>Bg : $button-background-hover</li>
+                                <li>Border : $button-border-color-hover</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p> Au survol, les couleurs du fond et de la bordure sont identiques pour tous les boutons. La
+                        police prend la couleur de la palette.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton 4 bis-->
+        <div class="cell medium-6">
+            <!-- .btn-2-empty-border-plain -->
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-2-empty-border-plain</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b; height: 5em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-2-empty-border-plain">Exemple</a>
+                        <a class="secondary btn-2-empty-border-plain">Exemple</a>
+                        <a class="success btn-2-empty-border-plain">Exemple</a>
+                        <a class="warning btn-2-empty-border-plain">Exemple</a>
+                        <a class="alert btn-2-empty-border-plain">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section text-center" style="height: 28em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-2-empty-border-plain">Exemple</a>
+                        <a class="secondary btn-2-empty-border-plain">Exemple</a>
+                        <a class="success btn-2-empty-border-plain">Exemple</a>
+                        <a class="warning btn-2-empty-border-plain">Exemple</a>
+                        <a class="alert btn-2-empty-border-plain">Exemple</a>
+                    </div>
+                    <hr>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Caractéristiques :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : palette</li>
+                                <li>Bg : transparent</li>
+                                <li>Border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Au survol :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : palette</li>
+                                <li>Bg : $button-background-hover</li>
+                                <li>Border : $button-border-color-hover</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>
+                        Au survol, les couleur du fond et de la bordure sont identiques pour tous les boutons. La
+                        couleur de la police reste
+                        celle de la palette.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ensemble de cartes 3 -->
+    <div class="grid-x grid-padding-x">
+        <div class="cell">
+            <h4 class="text-underline">3. Les boutons ont un style unique au survol</h4>
+        </div>
+
+        <!-- Bouton 5 -->
+        <div class="cell medium-6">
+            <!-- .btn-3-full -->
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-3-full</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b; height: 5em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-3-full">Exemple</a>
+                        <a class="secondary btn-3-full">Exemple</a>
+                        <a class="success btn-3-full">Exemple</a>
+                        <a class="warning btn-3-full">Exemple</a>
+                        <a class="alert btn-3-full">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section text-center" style="height: 28em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-3-full">Exemple</a>
+                        <a class="secondary btn-3-full">Exemple</a>
+                        <a class="success btn-3-full">Exemple</a>
+                        <a class="warning btn-3-full">Exemple</a>
+                        <a class="alert btn-3-full">Exemple</a>
+                    </div>
+                    <hr>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Caractéristiques :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-background-hover</li>
+                                <li>Bg : palette</li>
+                                <li>Border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Au survol :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-color-hover</li>
+                                <li>Bg : $button-background-hover</li>
+                                <li>Border : $button-color-hover</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>
+                        Au survol, la couleur du fond et celle de la police sont identiques pour tous les boutons.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Bouton 6 -->
+        <div class="cell medium-6">
+            <!-- .btn-3-empty -->
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-3-empty</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b; height: 5em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-3-empty">Exemple</a>
+                        <a class="secondary btn-3-empty">Exemple</a>
+                        <a class="success btn-3-empty">Exemple</a>
+                        <a class="warning btn-3-empty">Exemple</a>
+                        <a class="alert btn-3-empty">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section text-center" style="height: 28em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-3-empty">Exemple</a>
+                        <a class="secondary btn-3-empty">Exemple</a>
+                        <a class="success btn-3-empty">Exemple</a>
+                        <a class="warning btn-3-empty">Exemple</a>
+                        <a class="alert btn-3-empty">Exemple</a>
+                    </div>
+                    <hr>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Caractéristiques :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : palette</li>
+                                <li>Bg : transparent</li>
+                                <li>Border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Au survol :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-color-hover</li>
+                                <li>Bg : transparent</li>
+                                <li>Border: $button-color-hover</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>
+                        Au survol, la couleur des polices, fonds et bordures au survol sont identiques pour tous les
+                        boutons.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ensemble de cartes 4 -->
+    <div class="grid-x grid-padding-x">
+        <div class="cell">
+            <h4 class="text-underline">4. Couleur de la police fixe au survol, bordure de la couleur de la palette</h4>
+        </div>
+
+        <!-- Bouton 7 -->
+        <div class="cell medium-6">
+            <!-- .btn-4-full -->
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-4-full</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b; height: 5em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-4-full ">Exemple</a>
+                        <a class="secondary btn-4-full ">Exemple</a>
+                        <a class="success btn-4-full ">Exemple</a>
+                        <a class="warning btn-4-full ">Exemple</a>
+                        <a class="alert btn-4-full ">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section text-center" style="height: 28em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-4-full ">Exemple</a>
+                        <a class="secondary btn-4-full ">Exemple</a>
+                        <a class="success btn-4-full ">Exemple</a>
+                        <a class="warning btn-4-full ">Exemple</a>
+                        <a class="alert btn-4-full ">Exemple</a>
+                    </div>
+                    <hr>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Caractéristiques :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-color</li>
+                                <li>Bg : palette</li>
+                                <li>Border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Au survol :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-color</li>
+                                <li>Bg : transparent</li>
+                                <li>Border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>
+                        Au survol, la couleur de police reste identique, le fond devient transparent.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton 8 -->
+        <div class="cell medium-6">
+            <!-- .btn-4-empty -->
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-4-empty</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b; height: 5em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-4-empty">Exemple</a>
+                        <a class="secondary btn-4-empty">Exemple</a>
+                        <a class="success btn-4-empty">Exemple</a>
+                        <a class="warning btn-4-empty">Exemple</a>
+                        <a class="alert btn-4-empty">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section text-center" style="height: 28em;padding-top: 1em;">
+                    <div class="align-center button-group">
+                        <a class="primary btn-4-empty">Exemple</a>
+                        <a class="secondary btn-4-empty">Exemple</a>
+                        <a class="success btn-4-empty">Exemple</a>
+                        <a class="warning btn-4-empty">Exemple</a>
+                        <a class="alert btn-4-empty">Exemple</a>
+                    </div>
+                    <hr>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Caractéristiques :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-color</li>
+                                <li>Bg : transparent</li>
+                                <li>Border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Au survol :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-color</li>
+                                <li>Bg : palette</li>
+                                <li>Border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>
+                        Au survol, la couleur de police reste identique, le fond prend la couleur de la bordure.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ensemble de cartes 5 -->
+    <div class="grid-x grid-padding-x">
+        <div class="cell">
+            <h4 class="text-underline">5. Effet de fondu vers le centre au survol </h4>
+        </div>
+
+        <!-- Bouton 9 -->
+        <div class="cell medium-6">
+            <!-- .btn-scale-full -->
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-scale-full</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b; height: 5em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-scale-full">Exemple</a>
+                        <a class="secondary btn-scale-full ">Exemple</a>
+                        <a class="success btn-scale-full ">Exemple</a>
+                        <a class="warning btn-scale-full ">Exemple</a>
+                        <a class="alert btn-scale-full ">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section text-center" style="height: 28em;padding-top: 1em;">
+                    <div class="align-center button-group">
+                        <a class="primary btn-scale-full ">Exemple</a>
+                        <a class="secondary btn-scale-full ">Exemple</a>
+                        <a class="success btn-scale-full ">Exemple</a>
+                        <a class="warning btn-scale-full ">Exemple</a>
+                        <a class="alert btn-scale-full ">Exemple</a>
+                    </div>
+                    <hr>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Caractéristiques :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-color*</li>
+                                <li>Bg : palette</li>
+                                <li>Border : transparent</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Au survol :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : palette</li>
+                                <li>Bg : $button-background-hover</li>
+                                <li>Border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>
+                        Au survol, la couleur disparait vers le centre du bouton, qui prend une couleur de survol. ATTENTION :  l'ajout d'une ombre (.box-shadow) peut déformer ce bouton.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton 10 -->
+        <div class="cell medium-6">
+            <!-- .btn-scale-empty -->
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-scale-empty</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b; height: 5em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-scale-empty ">Exemple</a>
+                        <a class="secondary btn-scale-empty ">Exemple</a>
+                        <a class="success btn-scale-empty ">Exemple</a>
+                        <a class="warning btn-scale-empty ">Exemple</a>
+                        <a class="alert btn-scale-empty ">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section text-center" style="height: 28em;padding-top: 1em;">
+                    <div class="align-center button-group">
+                        <a class="primary btn-scale-empty ">Exemple</a>
+                        <a class="secondary btn-scale-empty ">Exemple</a>
+                        <a class="success btn-scale-empty ">Exemple</a>
+                        <a class="warning btn-scale-empty ">Exemple</a>
+                        <a class="alert btn-scale-empty ">Exemple</a>
+                    </div>
+                    <hr>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Caractéristiques :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : palette</li>
+                                <li>Bg : transparent</li>
+                                <li>Border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Au survol :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-color*</li>
+                                <li>Bg : palette</li>
+                                <li>Border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>
+                        Au survol, la couleur apparait à partir du centre du bouton, qui prend la couleur de la palette.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton 11 -->
+        <div class="cell medium-6">
+            <!-- .btn-scale-full-border-palette -->
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-scale-full-border-palette</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b; height: 5em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-scale-full-border-palette ">Exemple</a>
+                        <a class="secondary btn-scale-full-border-palette ">Exemple</a>
+                        <a class="success btn-scale-full-border-palette ">Exemple</a>
+                        <a class="warning btn-scale-full-border-palette ">Exemple</a>
+                        <a class="alert btn-scale-full-border-palette ">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section text-center" style="height: 28em;padding-top: 1em;">
+                    <div class="align-center button-group">
+                        <a class="primary btn-scale-full-border-palette ">Exemple</a>
+                        <a class="secondary btn-scale-full-border-palette ">Exemple</a>
+                        <a class="success btn-scale-full-border-palette ">Exemple</a>
+                        <a class="warning btn-scale-full-border-palette ">Exemple</a>
+                        <a class="alert btn-scale-full-border-palette ">Exemple</a>
+                    </div>
+                    <hr>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Caractéristiques :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-color*</li>
+                                <li>Bg : palette</li>
+                                <li>Border : transparent</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Au survol :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : palette</li>
+                                <li>Bg : $button-background-hover</li>
+                                <li>Border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>
+                        Au survol, la couleur disparait vers le centre du bouton, qui prend un fond transparent. ATTENTION :  l'ajout d'une ombre (.box-shadow) peut déformer ce bouton.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton 12 -->
+        <div class="cell medium-6">
+            <!-- .btn-scale-empty-border-palette -->
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-scale-empty-border-palette</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b; height: 5em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-scale-empty-border-palette ">Exemple</a>
+                        <a class="secondary btn-scale-empty-border-palette ">Exemple</a>
+                        <a class="success btn-scale-empty-border-palette ">Exemple</a>
+                        <a class="warning btn-scale-empty-border-palette ">Exemple</a>
+                        <a class="alert btn-scale-empty-border-palette ">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section text-center" style="height: 28em;padding-top: 1em;">
+                    <div class="align-center button-group">
+                        <a class="primary btn-scale-empty-border-palette ">Exemple</a>
+                        <a class="secondary btn-scale-empty-border-palette ">Exemple</a>
+                        <a class="success btn-scale-empty-border-palette ">Exemple</a>
+                        <a class="warning btn-scale-empty-border-palette ">Exemple</a>
+                        <a class="alert btn-scale-empty-border-palette ">Exemple</a>
+                    </div>
+                    <hr>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Caractéristiques :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : palette</li>
+                                <li>Bg : transparent</li>
+                                <li>Border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Au survol :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : palette</li>
+                                <li>Bg : $button-background-hover</li>
+                                <li>Border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>
+                        Au survol, la couleur apparait à partir du centre du bouton, qui prend une couleur identique
+                        pour tous les boutons et une bordure de la couleur de la palette.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton 13 -->
+        <div class="cell medium-6">
+            <!-- .btn-scale-full-plain -->
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-scale-full-plain</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b; height: 5em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-scale-full-plain ">Exemple</a>
+                        <a class="secondary btn-scale-full-plain ">Exemple</a>
+                        <a class="success btn-scale-full-plain ">Exemple</a>
+                        <a class="warning btn-scale-full-plain ">Exemple</a>
+                        <a class="alert btn-scale-full-plain ">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section text-center" style="height: 28em;padding-top: 1em;">
+                    <div class="align-center button-group">
+                        <a class="primary btn-scale-full-plain ">Exemple</a>
+                        <a class="secondary btn-scale-full-plain ">Exemple</a>
+                        <a class="success btn-scale-full-plain ">Exemple</a>
+                        <a class="warning btn-scale-full-plain ">Exemple</a>
+                        <a class="alert btn-scale-full-plain ">Exemple</a>
+                    </div>
+                    <hr>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Caractéristiques :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-color*</li>
+                                <li>Bg : palette</li>
+                                <li>Border : transparent</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Au survol :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-color-hover</li>
+                                <li>Bg : $button-background-hover</li>
+                                <li>Border : transparent</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>
+                        Au survol, la couleur disparait vers le centre du bouton, qui prend un style identique pour
+                        tous les boutons. ATTENTION :  l'ajout d'une ombre (.box-shadow) peut déformer ce bouton.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton 14 -->
+        <div class="cell medium-6">
+            <!-- .btn-scale-empty-plain -->
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-scale-empty-plain</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b; height: 5em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-scale-empty-plain ">Exemple</a>
+                        <a class="secondary btn-scale-empty-plain ">Exemple</a>
+                        <a class="success btn-scale-empty-plain ">Exemple</a>
+                        <a class="warning btn-scale-empty-plain ">Exemple</a>
+                        <a class="alert btn-scale-empty-plain ">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section text-center" style="height: 28em;padding-top: 1em;">
+                    <div class="align-center button-group">
+                        <a class="primary btn-scale-empty-plain ">Exemple</a>
+                        <a class="secondary btn-scale-empty-plain ">Exemple</a>
+                        <a class="success btn-scale-empty-plain ">Exemple</a>
+                        <a class="warning btn-scale-empty-plain ">Exemple</a>
+                        <a class="alert btn-scale-empty-plain ">Exemple</a>
+                    </div>
+                    <hr>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Caractéristiques :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : palette</li>
+                                <li>Bg : transparent</li>
+                                <li>Border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Au survol :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-color-hover</li>
+                                <li>Bg : $button-background-hover</li>
+                                <li>Border : transparent</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>
+                        Au survol, la couleur apparait à partir du centre du bouton, qui prend un style identique
+                        pour
+                        tous les boutons.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton 15 -->
+        <div class="cell medium-6">
+            <!-- .btn-scale-full-border-plain -->
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-scale-full-border-plain</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b; height: 5em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-scale-full-border-plain ">Exemple</a>
+                        <a class="secondary btn-scale-full-border-plain ">Exemple</a>
+                        <a class="success btn-scale-full-border-plain ">Exemple</a>
+                        <a class="warning btn-scale-full-border-plain ">Exemple</a>
+                        <a class="alert btn-scale-full-border-plain ">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section text-center" style="height: 28em;padding-top: 1em;">
+                    <div class="align-center button-group">
+                        <a class="primary btn-scale-full-border-plain ">Exemple</a>
+                        <a class="secondary btn-scale-full-border-plain ">Exemple</a>
+                        <a class="success btn-scale-full-border-plain ">Exemple</a>
+                        <a class="warning btn-scale-full-border-plain ">Exemple</a>
+                        <a class="alert btn-scale-full-border-plain ">Exemple</a>
+                    </div>
+                    <hr>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Caractéristiques :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-color*</li>
+                                <li>Bg : palette</li>
+                                <li>Border : transparent</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Au survol :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-border-color-hover***</li>
+                                <li>Bg : $button-background-hover</li>
+                                <li>Border : $button-border-color-hover***</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>
+                        Au survol, la couleur disparait vers le centre du bouton, style unique pour tous les boutons, la
+                        couleur est identique pour la bordure et la police. ATTENTION :  l'ajout d'une ombre (.box-shadow) peut déformer ce bouton.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton 16 -->
+        <div class="cell medium-6">
+            <!-- .btn-scale-empty-border-plain-->
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-scale-empty-border-plain</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b; height: 5em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-scale-empty-border-plain">Exemple</a>
+                        <a class="secondary btn-scale-empty-border-plain">Exemple</a>
+                        <a class="success btn-scale-empty-border-plain">Exemple</a>
+                        <a class="warning btn-scale-empty-border-plain">Exemple</a>
+                        <a class="alert btn-scale-empty-border-plain">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section text-center" style="height: 28em;padding-top: 1em;">
+                    <div class="align-center button-group">
+                        <a class="primary btn-scale-empty-border-plain">Exemple</a>
+                        <a class="secondary btn-scale-empty-border-plain">Exemple</a>
+                        <a class="success btn-scale-empty-border-plain">Exemple</a>
+                        <a class="warning btn-scale-empty-border-plain">Exemple</a>
+                        <a class="alert btn-scale-empty-border-plain">Exemple</a>
+                    </div>
+                    <hr>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Caractéristiques :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : palette</li>
+                                <li>Bg : transparent</li>
+                                <li>Border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Au survol :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-border-color-hover***</li>
+                                <li>Bg : $button-background-hover</li>
+                                <li>Border : $button-border-color-hover***</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>
+                        Au survol, la couleur apparait à partir du centre du bouton, style unique pour tous les boutons, la
+                        couleur est identique pour la bordure et la police. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Ensemble de cartes 6 -->
+    <div class="grid-x grid-padding-x">
+        <div class="cell">
+            <h4 class="text-underline">6. Effet d'agrandissement au survol </h4>
+        </div>
+
+        <!-- Bouton 17 -->
+        <div class="cell medium-6">
+            <!-- .btn-extend-full-->
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-extend-full</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b; height: 5em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-extend-full">Exemple</a>
+                        <a class="secondary btn-extend-full">Exemple</a>
+                        <a class="success btn-extend-full">Exemple</a>
+                        <a class="warning btn-extend-full">Exemple</a>
+                        <a class="alert btn-extend-full">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section text-center" style="height: 28em;padding-top: 1em;">
+                    <div class="align-center button-group">
+                        <a class="primary btn-extend-full">Exemple</a>
+                        <a class="secondary btn-extend-full">Exemple</a>
+                        <a class="success btn-extend-full">Exemple</a>
+                        <a class="warning btn-extend-full">Exemple</a>
+                        <a class="alert btn-extend-full">Exemple</a>
+                    </div>
+                    <hr>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Caractéristiques :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-color*</li>
+                                <li>Bg : palette</li>
+                                <li>border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Au survol :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-color*</li>
+                                <li>Bg : palette</li>
+                                <li>border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>
+                       Le bouton s'agrandit au survol, en conservant son style.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton 18 -->
+        <div class="cell medium-6">
+            <!-- .btn-extend-empty-->
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-extend-empty</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b; height: 5em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-extend-empty">Exemple</a>
+                        <a class="secondary btn-extend-empty">Exemple</a>
+                        <a class="success btn-extend-empty">Exemple</a>
+                        <a class="warning btn-extend-empty">Exemple</a>
+                        <a class="alert btn-extend-empty">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section text-center" style="height: 28em;padding-top: 1em;">
+                    <div class="align-center button-group">
+                        <a class="primary btn-extend-empty">Exemple</a>
+                        <a class="secondary btn-extend-empty">Exemple</a>
+                        <a class="success btn-extend-empty">Exemple</a>
+                        <a class="warning btn-extend-empty">Exemple</a>
+                        <a class="alert btn-extend-empty">Exemple</a>
+                    </div>
+                    <hr>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Caractéristiques :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : palette</li>
+                                <li>Bg : transparent</li>
+                                <li>border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Au survol :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : palette</li>
+                                <li>Bg : transparent</li>
+                                <li>border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>
+                        Le bouton s'agrandit au survol, en conservant son style.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton 19 -->
+        <div class="cell medium-6">
+            <!-- .btn-extend-full-plain -->
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-extend-full-plain</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b; height: 5em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-extend-full-plain ">Exemple</a>
+                        <a class="secondary btn-extend-full-plain ">Exemple</a>
+                        <a class="success btn-extend-full-plain ">Exemple</a>
+                        <a class="warning btn-extend-full-plain ">Exemple</a>
+                        <a class="alert btn-extend-full-plain ">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section text-center" style="height: 28em;padding-top: 1em;">
+                    <div class="align-center button-group">
+                        <a class="primary btn-extend-full-plain ">Exemple</a>
+                        <a class="secondary btn-extend-full-plain ">Exemple</a>
+                        <a class="success btn-extend-full-plain ">Exemple</a>
+                        <a class="warning btn-extend-full-plain ">Exemple</a>
+                        <a class="alert btn-extend-full-plain ">Exemple</a>
+                    </div>
+                    <hr>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Caractéristiques :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-color*</li>
+                                <li>Bg : palette</li>
+                                <li>border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Au survol :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-color-hover</li>
+                                <li>Bg : $button-background-hover</li>
+                                <li>Border : $button-background-hover</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>
+                        Au survol, le bouton grandit, et prend un style unique au survol.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton 20 -->
+        <div class="cell medium-6">
+            <!-- .btn-extend-empty-plain -->
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-extend-empty-plain</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b; height: 5em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-extend-empty-plain ">Exemple</a>
+                        <a class="secondary btn-extend-empty-plain ">Exemple</a>
+                        <a class="success btn-extend-empty-plain ">Exemple</a>
+                        <a class="warning btn-extend-empty-plain ">Exemple</a>
+                        <a class="alert btn-extend-empty-plain ">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section text-center" style="height: 28em;padding-top: 1em;">
+                    <div class="align-center button-group">
+                        <a class="primary btn-extend-empty-plain ">Exemple</a>
+                        <a class="secondary btn-extend-empty-plain ">Exemple</a>
+                        <a class="success btn-extend-empty-plain ">Exemple</a>
+                        <a class="warning btn-extend-empty-plain ">Exemple</a>
+                        <a class="alert btn-extend-empty-plain ">Exemple</a>
+                    </div>
+                    <hr>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Caractéristiques :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : palette</li>
+                                <li>Bg : transparent</li>
+                                <li>border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Au survol :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-color-hover</li>
+                                <li>Bg : $button-background-hover</li>
+                                <li>Border : $button-background-hover</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>
+                        Au survol, le bouton grandit, et prend un style unique au survol.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton 21 -->
+        <div class="cell medium-6">
+            <!-- .btn-extend-full-border-palette-->
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-extend-full-border-palette</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b; height: 5em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-extend-full-border-palette">Exemple</a>
+                        <a class="secondary btn-extend-full-border-palette">Exemple</a>
+                        <a class="success btn-extend-full-border-palette">Exemple</a>
+                        <a class="warning btn-extend-full-border-palette">Exemple</a>
+                        <a class="alert btn-extend-full-border-palette">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section text-center" style="height: 28em;padding-top: 1em;">
+                    <div class="align-center button-group">
+                        <a class="primary btn-extend-full-border-palette">Exemple</a>
+                        <a class="secondary btn-extend-full-border-palette">Exemple</a>
+                        <a class="success btn-extend-full-border-palette">Exemple</a>
+                        <a class="warning btn-extend-full-border-palette">Exemple</a>
+                        <a class="alert btn-extend-full-border-palette">Exemple</a>
+                    </div>
+                    <hr>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Caractéristiques :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-color*</li>
+                                <li>Bg : palette</li>
+                                <li>border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Au survol :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : palette</li>
+                                <li>Bg : $button-background-hover</li>
+                                <li>Border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>
+                        Au survol, le bouton grandit, la couleur du background change, les couleurs de la police et de la bordure prennent la couleur de la palette. 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton 22 -->
+        <div class="cell medium-6">
+            <!-- .btn-extend-empty-border-palette-->
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-extend-empty-border-palette</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b; height: 5em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-extend-empty-border-palette">Exemple</a>
+                        <a class="secondary btn-extend-empty-border-palette">Exemple</a>
+                        <a class="success btn-extend-empty-border-palette">Exemple</a>
+                        <a class="warning btn-extend-empty-border-palette">Exemple</a>
+                        <a class="alert btn-extend-empty-border-palette">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section text-center" style="height: 28em;padding-top: 1em;">
+                    <div class="align-center button-group">
+                        <a class="primary btn-extend-empty-border-palette">Exemple</a>
+                        <a class="secondary btn-extend-empty-border-palette">Exemple</a>
+                        <a class="success btn-extend-empty-border-palette">Exemple</a>
+                        <a class="warning btn-extend-empty-border-palette">Exemple</a>
+                        <a class="alert btn-extend-empty-border-palette">Exemple</a>
+                    </div>
+                    <hr>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Caractéristiques :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : palette</li>
+                                <li>Bg : transparent</li>
+                                <li>border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Au survol :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : palette</li>
+                                <li>Bg : $button-background-hover</li>
+                                <li>Border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>
+                        Au survol, le bouton grandit, la couleur du background change, les couleurs de la police et de la bordure prennent la couleur de la palette. 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton 23 -->
+        <div class="cell medium-6">
+            <!-- .btn-extend-full-border-plain-->
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-extend-full-border-plain</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b; height: 5em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-extend-full-border-plain">Exemple</a>
+                        <a class="secondary btn-extend-full-border-plain">Exemple</a>
+                        <a class="success btn-extend-full-border-plain">Exemple</a>
+                        <a class="warning btn-extend-full-border-plain">Exemple</a>
+                        <a class="alert btn-extend-full-border-plain">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section text-center" style="height: 28em;padding-top: 1em;">
+                    <div class="align-center button-group">
+                        <a class="primary btn-extend-full-border-plain">Exemple</a>
+                        <a class="secondary btn-extend-full-border-plain">Exemple</a>
+                        <a class="success btn-extend-full-border-plain">Exemple</a>
+                        <a class="warning btn-extend-full-border-plain">Exemple</a>
+                        <a class="alert btn-extend-full-border-plain">Exemple</a>
+                    </div>
+                    <hr>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Caractéristiques :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-color*</li>
+                                <li>Bg : palette</li>
+                                <li>border : palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Au survol :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-border-color-hover</li>
+                                <li>Bg : $button-background-hover</li>
+                                <li>Border : $button-border-color-hover</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>
+                        Au survol, le bouton grandit, la couleur du background change, les boutons prennent un style unique. 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton 24 -->
+        <div class="cell medium-6">
+            <!-- .btn-extend-empty-border-plain-->
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-extend-empty-border-plain</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b; height: 5em;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-extend-empty-border-plain">Exemple</a>
+                        <a class="secondary btn-extend-empty-border-plain">Exemple</a>
+                        <a class="success btn-extend-empty-border-plain">Exemple</a>
+                        <a class="warning btn-extend-empty-border-plain">Exemple</a>
+                        <a class="alert btn-extend-empty-border-plain">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section text-center" style="height: 28em;padding-top: 1em;">
+                    <div class="align-center button-group">
+                        <a class="primary btn-extend-empty-border-plain">Exemple</a>
+                        <a class="secondary btn-extend-empty-border-plain">Exemple</a>
+                        <a class="success btn-extend-empty-border-plain">Exemple</a>
+                        <a class="warning btn-extend-empty-border-plain">Exemple</a>
+                        <a class="alert btn-extend-empty-border-plain">Exemple</a>
+                    </div>
+                    <hr>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Caractéristiques :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-color</li>
+                                <li>Bg : $color-palette</li>
+                                <li>border : $color-palette</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid-x">
+                        <div class="cell small-4" style="padding-left: 0!important; padding-right: 0!important;">
+                            <p class="text-underline text-left">Au survol :</p>
+                        </div>
+                        <div class="cell medium-7" style="padding-left: 0!important; padding-right: 0!important;">
+                            <ul class="no-bullet text-left">
+                                <li>Color : $button-border-color-hover</li>
+                                <li>Bg : $button-background-hover</li>
+                                <li>Border : $button-border-color-hover</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>
+                        Au survol, le bouton grandit, la couleur du background change, les boutons prennent un style unique. 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+    <!-- Notes * -->
+    <div class="grid-x">
+        <div class="cell">
+            <p class="help-text text-justify align-self-bottom">* $button-color ou $button-color-alt : La couleur du
+                texte est générée automatiquement pour optimiser le contraste entre le fond et le texte.</p>
+            <p class="help-text text-justify align-self-bottom">** Si $button-border-color-hover est égale à "none" ou
+                "transparent", il n'y a pas de bordure. Si $button-border-color-hover est paramétré sur une couleur,
+                quelquelle soit, alors la couleur de la bordure sera la couleur de la palette associée. </p>
+            <p class="help-text text-justify align-self-bottom">*** Si la classe $button-border-color-hover est paramétrée sur "none" ou "transparent", alors le bouton prend pour couleur de police et bordure la couleur paramétrée dans la variable $button-color-hover.</p>
+        </div>
+    </div>
+
+    <!-- Essais -->
+    <div class="grid-x">
+
+        <!-- Bouton essai 4 -->
+        <div class="cell medium-3">
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    .button-d
+                </div>
+                <div class="card-section align-center button-group" style="height: 20em;padding-top: 1em;">
+                    <p class="text-justify">Site modèle : ~ </p>
+                    <button type="button" class="button alert d-button">Exemple</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Bouton essai 7 En cours...-->
+        <div class="cell medium-3">
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    .button-g
+                </div>
+                <div class="card-section align-center button-group" style="height: 20em;padding-top: 1em;">
+                    <p class="text-justify">Site modèle : Anjou Confort</p>
+                    <a class="warning g-button">Exemple</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="cell medium-3">
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    .slide-button
+                </div>
+                <div class="card-section align-center button-group" style="height: 20em;padding-top: 1em;">
+                    <a class="warning slide-button">Exemple</a>
+                </div>
+            </div>
+        </div>
+        <div class="cell medium-3">
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    .slide-button-1
+                </div>
+                <div class="card-section align-center button-group" style="height: 20em;padding-top: 1em;">
+                    <a class="warning slide-button-1">Exemple</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<!-- @Marine Lambert -->

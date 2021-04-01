@@ -1,0 +1,779 @@
+<div class="grid-container" style="margin-top: 2em;">
+    <div class="grid-x">
+
+        <a href="#" class="default primary btn btn-border-pink btn-color-warning        
+    color-hover-success bg-hover-pink border-hover-alert     
+    hover-scale-down">hover</a>
+        <a href="#" class="default primary btn btn-border-pink btn-color-warning        
+    color-hover-success bg-hover-pink border-hover-alert     
+    hover-scale-down">btn</a>
+        <a href="#" class="default primary btn-full btn-border-pink btn-color-warning        
+    color-hover-success bg-hover-pink border-hover-alert     
+    hover-scale-down">btn-full</a>
+        <a href="#" class="default primary btn-empty btn-border-pink btn-color-warning        
+    color-hover-success bg-hover-pink border-hover-alert     
+    hover-scale-down">btn-empty</a>
+
+
+        <a href="#" class=" primary btn-full btn-border-pink btn-color-warning 
+    bg-hover-pink border-hover-alert     
+       
+    heartbeat   
+    ">Animista</a>
+    </div>
+
+    <div class="grid-x">
+
+        <a href="#" class=" btn btn-border-pink btn-color-warning        
+    color-hover-success bg-hover-pink border-hover-alert     
+    hover-extend">sans palette</a>
+        <a href="#" class="primary btn btn-border-pink btn-color-warning        
+    color-hover-success bg-hover-pink border-hover-alert     
+    hover-extend">btn</a>
+    <!-- Pas de couleur de départ -->
+    <a href="#" class="secondary btn-test btn-border-pink bg-hover-pink">btn test</a> 
+
+        <a href="#" class="primary btn-full btn-border-pink btn-color-warning        
+    color-hover-success bg-hover-pink border-hover-alert     
+    hover-extend">btn-full</a>
+        <a href="#" class="primary btn-empty btn-border-pink btn-color-warning        
+    color-hover-success bg-hover-pink border-hover-alert     
+    hover-extend">btn-empty</a>
+    </div>
+    
+
+
+</div>
+
+<!-- TUTOS ET EXPLICATIONS -->
+<div class="grid-container" style="margin-top:2em;">
+
+    <!-- Titre et explications du fonctionnement des classes -->
+    <div class="grid-x ">
+        <div class="cell">
+            <h3 class="text-underline">Boutons customisables :</h3>
+            <p>Insérer des couleurs dans la palette. <i>(Customization sass / 1. General / $foundation-palette )</i></p>
+            <p>Les classes sont indiquées en haut des cartes. Il est possible de combiner toutes les classes (sauf
+                indication contraire mentionnée sur la carte).</p>
+            <p>Pour utiliser les classes de boutons qui suivent, il est INDISPENSABLE d'ajouter une classe de palette
+                dans le HTML. Par exemple : <code
+                    style="color: midnightblue; background-color: whitesmoke; "><strong>primary</strong>
+                    btn-full</code>. Cette classe correspond à la couleur de palette associée ($color-palette). </p>
+            <p>La classe <code style="color: midnightblue; background-color: whitesmoke; ">.button</code> (classe de
+                base des boutons dans Zurb Foundation) doit être ignorée lorsqu'on ajout une
+                classe issue de la bibliothèque ci-dessous. Les classes qui suivent peuvent avoir un comportement
+                innatendu avec l'insertion de la classe <code
+                    style="color: midnightblue; background-color: whitesmoke; ">.button</code>.</p>
+        </div>
+
+    </div>
+
+    <!-- Mini-doc -->
+
+    <!-- CRÉATION BOUTON 1 -->
+    <div class="grid-x" style="height: 6em;">
+
+        <div class="cell medium-1">
+            1.
+        </div>
+        <div class="cell medium-6">
+            <div class="grid-x">
+                <p>Créer un bouton avec la classe <code
+                        style="color: midnightblue; background-color: whitesmoke; ">.btn</code>, <code
+                        style="color: midnightblue; background-color: whitesmoke; ">.btn-full</code>, <code
+                        style="color: midnightblue; background-color: whitesmoke; ">.btn-empty</code>
+                </p>
+            </div>
+            <div class="grid-x">
+                <span style="letter-spacing: -0.02rem;  color: #8a8a8a;">
+                    <i>class="warning btn-full"</i>
+                </span>
+            </div>
+        </div>
+        <div class="cell medium-5">
+            <div class="grid-x align-center">
+                <a class="warning btn-full" href="#" style="width: 15em;">.btn-full</a>
+            </div>
+            <div class="grid-x align-center">
+                <i class="fas fa-chevron-down" style="color: #232e4e; margin-top: 0.6em;"></i>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- CRÉATION BOUTON 2 -->
+    <div class="grid-x" style="height: 6em;">
+
+        <div class="cell medium-1">
+            2.
+        </div>
+        <div class="cell medium-6">
+            <div class="grid-x">
+                <p>Ajouter une classe couleur du la police au hover, associée à un nom de couleur de la pallette, <code
+                        style="color: midnightblue; background-color: whitesmoke; ">.color-hover-<i>couleur-palette</i></code>
+                </p>
+            </div>
+            <div class="grid-x">
+                <span style="letter-spacing: -0.02rem;  color: #8a8a8a;">
+                    <i> class="warning btn-full color-hover-alert"
+                    </i>
+                </span>
+            </div>
+        </div>
+        <div class="cell medium-5">
+            <div class="grid-x align-center">
+                <a class="warning btn-full color-hover-alert" href="#" style="width: 15em;"> .color-hover-alert</a>
+            </div>
+            <div class="grid-x align-center">
+                <i class="fas fa-chevron-down" style="color: #232e4e;"></i>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- CRÉATION BOUTON 3 -->
+    <div class="grid-x" style="height: 6em;">
+
+        <div class="cell medium-1">
+            3.
+        </div>
+        <div class="cell medium-6">
+            <div class="grid-x">
+                <p>
+                    Ajouter une classe couleur de la police au hover, associée à un nom de couleur de la pallette,
+                    <code
+                        style="color: midnightblue; background-color: whitesmoke; ">.border-hover-<i>couleur-palette</i></code>
+                </p>
+            </div>
+            <div class="grid-x">
+                <span style="letter-spacing: -0.02rem;  color: #8a8a8a;">
+                    <i> class="warning btn-full color-hover-alert border-hover-alert"
+                    </i>
+                </span>
+            </div>
+        </div>
+        <div class="cell medium-5">
+            <div class="grid-x align-center">
+                <a class="warning btn-full color-hover-alert border-hover-alert" href="#"
+                    style="width: 15em;">.border-hover-alert</a>
+            </div>
+            <div class="grid-x align-center">
+                <i class="fas fa-chevron-down" style="color: #232e4e;"></i>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- CRÉATION BOUTON 4 -->
+    <div class="grid-x" style="height: 6em;">
+
+        <div class="cell medium-1">
+            4.
+        </div>
+        <div class="cell medium-6">
+            <div class="grid-x">
+                <p style="margin-bottom: 0;">
+                    Ajouter une classe couleur du background au hover, associée à un nom de couleur de la pallette,
+                    <code
+                        style="color: midnightblue; background-color: whitesmoke; ">.bg-hover-<i>couleur-palette</i></code>
+                </p>
+            </div>
+            <div class="grid-x">
+                <span style="letter-spacing: 0.02rem; padding-left: 1em; color: #8a8a8a;">
+                    <i>class="warning btn-full color-hover-alert border-hover-alert bg-hover-primary"</i>
+                </span>
+            </div>
+        </div>
+        <div class="cell medium-5">
+            <div class="grid-x align-center">
+                <a class="warning btn-full color-hover-alert border-hover-alert bg-hover-primary" href="#"
+                    style="width: 15em;">.bg-hover-primary</a>
+            </div>
+            <div class="grid-x align-center">
+                <i class="fas fa-chevron-down" style="color: #232e4e;"></i>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- CRÉATION BOUTON 5 -->
+    <div class="grid-x" style="height: 6em;">
+
+        <div class="cell medium-1">
+            5.
+        </div>
+        <div class="cell medium-6">
+            <div class="grid-x">
+                <p style="margin-bottom: 0;">
+                    Ajouter une ombre
+                    <code style="color: midnightblue; background-color: whitesmoke; ">.shadow-hover</code>
+                </p>
+            </div>
+            <div class="grid-x">
+                <span style="letter-spacing: 0.02rem; padding-left: 1em; color: #8a8a8a;">
+                    <i>class="warning btn-full color-hover-alert border-hover-alert bg-hover-primary shadow-hover"</i>
+                </span>
+            </div>
+        </div>
+        <div class="cell medium-5">
+            <div class="grid-x align-center">
+                <a class="warning btn-full color-hover-alert border-hover-alert bg-hover-primary shadow-hover" href="#"
+                    style="width: 15em;">.shadow-hover</a>
+            </div>
+            <div class="grid-x align-center">
+                <i class="fas fa-chevron-down" style="color: #232e4e;"></i>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <!-- CRÉATION BOUTON 6 -->
+    <div class="grid-x" style="height: 6em;">
+
+        <div class="cell medium-1">
+            6.
+        </div>
+        <div class="cell medium-6">
+            <div class="grid-x">
+                <p style="margin-bottom: 0;">
+                    Ajouter une animation au survol <code
+                        style="color: midnightblue; background-color: whitesmoke; ">.hover-scale-down</code></p>
+            </div>
+            <div class="grid-x">
+                <span style="letter-spacing: 0.02rem; padding-left: 1em; color: #8a8a8a;">
+                    <i>class=""warning btn-full color-hover-alert border-hover-alert bg-hover-primary shadow-hover
+                        hover-scale-down"</i>
+                </span>
+            </div>
+        </div>
+        <div class="cell medium-5">
+            <div class="grid-x align-center">
+                <a class="warning btn-full color-hover-alert border-hover-alert bg-hover-primary shadow-hover hover-scale-down"
+                    href="#" style="width: 15em;">.hover-scale-down</a>
+            </div>
+            <div class="grid-x align-center">
+                <i class="fas fa-chevron-down" style="color: #232e4e;"></i>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- CARTES -->
+<div class="grid-container">
+
+    <!-- 3. Choix de la couleur du background au survol -->
+    <div class="grid-x grid-padding-x">
+        <div class="cell">
+            <h4 class="title-perso">3. Choix de la couleur de la police, du background et de la palette au survol</h4>
+        </div>
+
+        <!--  .color-hover -->
+        <div class="cell medium-4">
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;"> .color-hover-<i>couleur palette</i> </h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-full color-hover-warning">Exemple</a>
+                        <a class="warning btn-full color-hover-alert">Exemple</a>
+                        <a class="alert btn-full color-hover-primary">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section" style=" height: 7em;">
+                    <p>Au survol, la <strong>police</strong> prend la couleur de la classe associée à .bg-hover-.</p>
+                </div>
+            </div>
+        </div>
+
+        <!--  .bg-hover -->
+        <div class="cell medium-4">
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;"> .bg-hover-<i>couleur palette</i></h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-full bg-hover-secondary border-hover-transparent">Exemple</a>
+                        <a class="warning btn-full bg-hover-alert">Exemple</a>
+                        <a class="alert btn-full bg-hover-primary">Exemple</a>
+                    </div>
+                </div>
+                <div class="card-section" style=" height: 7em;">
+                    <p>Au survol, le <strong>background</strong> prend la couleur de la classe associée à .bg-hover-.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- .border-hover -->
+        <div class="cell medium-4">
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;"> .border-hover-<i>couleur palette</i></h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-full border-hover-secondary">Exemple</a>
+                        <a class="warning btn-full border-hover-alert">Exemple</a>
+                        <a class="alert btn-full border-hover-primary">Exemple</a>
+                    </div>
+                </div>
+                <div class="card-section" style=" height: 7em;">
+                    <p>Au survol, la <strong>bordure</strong> prend la couleur de la classe associée à .bg-hover-.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Transparence au survol -->
+    <div class="grid-x grid-padding-x">
+        <div class="cell">
+            <h4 class="title-perso">4. Background ou bordure transparente au survol</h4>
+        </div>
+
+        <!-- .color-hover-transparent INUTILE -->
+        <!-- <div class="cell medium-4">
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.color-hover-transparent </h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-full color-hover-transparent">Exemple</a>
+                        <a class="warning btn-full color-hover-transparent">Exemple</a>
+                        <a class="alert btn-full color-hover-transparent">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section">
+                    <p>Au survol, la <strong>police</strong> est transparente.</p>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- .bg-hover-transparent -->
+        <div class="cell medium-4">
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.bg-hover-transparent</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-full  bg-hover-transparent">Exemple</a>
+                        <a class="warning btn-full bg-hover-transparent">Exemple</a>
+                        <a class="alert btn-full bg-hover-transparent">Exemple</a>
+                    </div>
+                </div>
+                <div class="card-section" style=" height: 7em;">
+                    <p>Au survol, le <strong>background</strong> devient transparent.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- .border-hover-transparent -->
+        <div class="cell medium-4">
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.border-hover-transparent</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-full border-hover-transparent">Exemple</a>
+                        <a class="warning btn-full border-hover-transparent">Exemple</a>
+                        <a class="alert btn-full border-hover-transparent">Exemple</a>
+                    </div>
+                </div>
+                <div class="card-section" style=" height: 7em;">
+                    <p>Au survol, la <strong>bordure</strong> devient transparente.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. None au survol -->
+    <div class="grid-x grid-padding-x">
+        <div class="cell">
+            <h4 class="title-perso">5. Couleur, background ou bordure supprimé au survol</h4>
+        </div>
+
+        <!-- .color-hover-none -->
+        <div class="cell medium-4">
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.color-hover-none </h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-full color-hover-none">Exemple</a>
+                        <a class="warning btn-full color-hover-none">Exemple</a>
+                        <a class="alert btn-full color-hover-none">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section" style=" height: 7em;">
+                    <p>Au survol, la <strong>police</strong> est transparente.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- .bg-hover-none -->
+        <div class="cell medium-4">
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.bg-hover-none</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-full  bg-hover-none">Exemple</a>
+                        <a class="warning btn-full bg-hover-none">Exemple</a>
+                        <a class="alert btn-full bg-hover-none">Exemple</a>
+                    </div>
+                </div>
+                <div class="card-section" style=" height: 7em;">
+                    <p>Au survol, le <strong>background</strong> devient transparent.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- .border-hover-none -->
+        <div class="cell medium-4">
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.border-hover-none</h6>
+                </div>
+                <div class="card-section" style="background-color: #5f889b;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-full border-hover-none">Exemple</a>
+                        <a class="warning btn-full border-hover-none">Exemple</a>
+                        <a class="alert btn-full border-hover-none">Exemple</a>
+                    </div>
+                </div>
+                <div class="card-section" style=" height: 7em;">
+                    <p>Au survol, la <strong>bordure</strong> devient transparente.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5 bis. Choix de la couleur de l'ombre au survol -->
+    <div class="grid-x grid-padding-x">
+        <div class="cell">
+            <h4 class="title-perso">5 bis. Ajouter une ombre au survol</h4>
+        </div>
+
+        <!--  .shadow-hover -->
+        <div class="cell medium-4">
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;"> .shadow-hover </h6>
+                </div>
+                <div class="card-section" style="background-color: #c7cbce;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-full shadow-hover">Exemple</a>
+                        <a class="warning btn-full shadow-hover">Exemple</a>
+                        <a class="alert btn-full shadow-hover">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section" style=" height: 7em;">
+                    <p>Au survol, le bouton a une ombre ($button-box-shadow-hover).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 6. Animations scale au survol -->
+    <div class="grid-x grid-padding-x">
+        <div class="cell">
+            <h4 class="title-perso">6. Animations scale au survol</h4>
+        </div>
+
+        <!-- Scale-down -->
+        <div class="cell medium-4">
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.hover-scale-down </h6>
+                </div>
+                <div class="card-section" style="background-color: #759C57;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-full hover-scale-down">Exemple</a>
+                        <a class="warning btn-full hover-scale-down">Exemple</a>
+                        <a class="alert btn-full hover-scale-down">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section" style=" height: 7em;">
+                    <p>Au survol, la couleur disparait vers le centre.</p>
+                    <p><i> * Classe compatible avec les classes .btn-full</i></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scale-up -->
+        <div class="cell medium-4">
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.hover-scale-up</h6>
+                </div>
+                <div class="card-section" style="background-color: #759C57;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-empty hover-scale-up">Exemple</a>
+                        <a class="warning btn-empty hover-scale-up">Exemple</a>
+                        <a class="alert btn-empty hover-scale-up">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section" style=" height: 7em;">
+                    <p>Au survol, la couleur apparait depuis l'intérieur.</p>
+                    <p><i>* Classe compatible avec les classes .btn-empty</i></p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- 7. Animations extend au survol -->
+    <div class="grid-x grid-padding-x">
+        <div class="cell">
+            <h4 class="title-perso">7. Animations extend au survol</h4>
+        </div>
+
+        <!-- Extend -->
+        <div class="cell medium-4">
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.hover-extend </h6>
+                </div>
+                <div class="card-section" style="background-color: #759C57;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-full hover-extend">Exemple</a>
+                        <a class="warning btn-full hover-extend">Exemple</a>
+                        <a class="alert btn-full hover-extend">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section" style=" height: 7em;">
+                    <p>Au survol, le bouton s'agrandit.</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- 1. Aspect des boutons base, en position statique -->
+    <div class="grid-x grid-padding-x">
+        <div class="cell">
+            <h4 class="title-perso">1. Aspect des boutons base, en position statique</h4>
+        </div>
+
+        <!-- .btn -->
+        <div class="cell medium-4">
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn</h6>
+                </div>
+                <div class="card-section" style="background-color: #64AEB3;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn">Exemple</a>
+
+                    </div>
+                </div>
+                <div class="card-section" style=" height: 7em;">
+                    <p>Bouton de base background plein, pas d'effet de suvol.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- .btn-full -->
+        <div class="cell medium-4">
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-full</h6>
+                </div>
+                <div class="card-section" style="background-color: #64AEB3;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-full">Exemple</a>
+                        <a class="warning btn-full">Exemple</a>
+                        <a class="alert btn-full">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section" style=" height: 7em;">
+                    <p>Bouton de base background plein, pas d'effet de suvol</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- .btn-empty -->
+        <div class="cell medium-4">
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-empty</h6>
+                </div>
+                <div class="card-section" style="background-color: #64AEB3;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-empty">Exemple</a>
+                        <a class="warning btn-empty">Exemple</a>
+                        <a class="alert btn-empty">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section" style=" height: 7em;">
+                    <p>Bouton de base background vide, pas d'effet de suvol</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Choix de la couleur des options en statiques -->
+    <div class="grid-x grid-padding-x">
+        <div class="cell">
+            <h4 class="title-perso">2. Choix de couleur de la police, et de la bordure en statique</h4>
+        </div>
+
+        <!-- .btn-full .btn-color -->
+        <div class="cell medium-4">
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-color-<i>couleur palette</i> </h6>
+                </div>
+                <div class="card-section" style="background-color: #64AEB3;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-full btn-color-warning">Exemple</a>
+                        <a class="warning btn-full btn-color-success">Exemple</a>
+                        <a class="alert btn-full btn-color-primary">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section" style=" height: 7em;">
+                    <p>Le <strong>background</strong> prend la couleur de la classe associée à .btn-color.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- .btn-full .btn-bg  INUTILE-->
+        <!-- <div class="cell medium-4">
+                    <div class="card" style="padding: 0;">
+                        <div class="card-divider">
+                            <h6 style="color: whitesmoke;">.btn-bg-<i>couleur palette</i> </h6>
+                        </div>
+                        <div class="card-section" style="background-color: #64AEB3;padding-top: 1em;">
+                            <div class="button-group align-center">
+                                <a class="primary btn-full btn-bg-secondary border-hover-transparent">Exemple</a>
+                                <a class="warning btn-full btn-bg-success border-hover-transparent">Exemple</a>
+                                <a class="alert btn-full btn-bg-primary border-hover-transparent">Exemple</a>
+                            </div>
+                        </div>
+        
+                        <div class="card-section">
+                            <p>La <strong>police</strong> prend la couleur de la classe associée à .btn-color.</p>
+                        </div>
+                    </div>
+                </div> -->
+
+        <!-- .btn-full .btn-border -->
+        <div class="cell medium-4">
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;">.btn-border-<i>couleur palette</i> </h6>
+                </div>
+                <div class="card-section" style="background-color: #64AEB3;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="primary btn-full btn-border-secondary">Exemple</a>
+                        <a class="warning btn-full btn-border-success">Exemple</a>
+                        <a class="alert btn-full btn-border-primary">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section" style=" height: 7em;">
+                    <p>La <strong>bordure</strong> prend la couleur de la classe associée à .btn-color.</p>
+                </div>
+            </div>
+        </div>
+
+        <!--  .btn-shadow -->
+        <div class="cell medium-4">
+            <div class="card" style="padding: 0;">
+                <div class="card-divider">
+                    <h6 style="color: whitesmoke;"> .btn-shadow </h6>
+                </div>
+                <div class="card-section" style="background-color: #c7cbce;padding-top: 1em;">
+                    <div class="button-group align-center">
+                        <a class="success btn-full btn-shadow">Exemple</a>
+                        <a class="warning btn-full btn-shadow">Exemple</a>
+                        <a class="alert btn-full btn-shadow">Exemple</a>
+                    </div>
+                </div>
+
+                <div class="card-section" style=" height: 7em;">
+                    <p>Ajoute une ombre au bouton ($button-box-shadow-hover).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="grid-container">
+    <div class="grid-x">
+        <div class="cell">
+            <a href="#"
+                class="primary btn-full btn-color-pink btn-border-pink color-hover-primary bg-hover-pink border-hover-primary">Bouton
+                de test variables multiples</a>
+            <a href="#"
+                class="primary btn-empty btn-color-pink btn-border-pink color-hover-primary bg-hover-pink border-hover-primary">Bouton
+                de test variables multiples</a>
+            <a href="#" class="primary btn-full btn-color-pink color-hover-primary bg-hover-pink ">Bouton de test
+                variables multiples</a>
+            <a href="#" class="primary btn-full btn-color-pink border-hover-pink ">Bouton de test variables
+                multiples</a>
+            <a href="#" class="primary btn-full btn-color-pink bg-hover-transparent ">Bouton de test variables
+                multiples</a>
+            <a href="#"
+                class="primary btn-full btn-border-pink btn-color-pink bg-hover-transparent border-hover-transparent">Bouton
+                de test variables multiples</a>
+        </div>
+    </div>
+</div>
+
+<div class="grid-container">
+    <div class="grid-x">
+        <div class="cell">
+            <a href="#"
+                class="primary btn-full btn-border-pink btn-color-warning        color-hover-success bg-hover-pink border-hover-alert      hover-scale-down">Bouton
+                de test scale-down</a>
+            <a class="alert btn-full hover-scale-down btn-border-primary">Exemple</a>
+            <a href="#"
+                class="primary btn-full btn-border-pink btn-color-warning        color-hover-success bg-hover-transparent border-hover-alert      hover-scale-up">Bouton
+                de test scale-up</a>
+            <a href="#"
+                class="primary btn-full btn-border-pink btn-color-warning        color-hover-success bg-hover-warning border-hover-alert      hover-scale-up">Bouton
+                de test scale-up</a>
+            <a class="alert btn-full btn-color-warning hover-scale-up btn-border-primary">Exemple</a>
+            <a
+                class="alert btn-empty btn-color-success  btn-border-primary hover-scale-up color-hover-primary">Exemple</a>
+
+            <a href="#"
+                class="primary btn-full btn-border-pink btn-color-warning        color-hover-success bg-hover-pink border-hover-alert      hover-extend">Bouton
+                de test Extend</a>
+
+            <a href="#"
+                class="primary btn       color-hover-success bg-hover-pink border-hover-alert      hover-extend">Bouton
+                de test Extend</a>
+
+        </div>
+    </div>
+</div>
+
+<!-- Insertion d'effet animista au hover -->

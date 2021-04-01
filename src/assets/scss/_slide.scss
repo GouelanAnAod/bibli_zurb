@@ -1,0 +1,158 @@
+/*******************************************
+                SLIDE 3
+/*******************************************/
+
+@import "../../../node_modules/motion-ui/src/_classes.scss"; 
+// @import "../../../node_modules/motion-ui/src/transitions/hinge.scss"; 
+
+
+
+.orbit-bullets {
+    display: flex;
+    justify-content: center;
+}
+
+.universslide1 {
+    .orbit-caption {
+        width: 60% !important;
+        right: 50% !important; //$orbit-caption-right
+        transform: translate(50%, 0) !important; // $orbit-caption-transform
+        height: 5em;
+        padding: 0;
+    }
+}
+
+.universslide2 {
+    .orbit-caption {
+        width: 36%; // $orbit-caption-width
+        height: 7em; // $orbit-caption-height
+        border-radius: $orbit-caption-border-radius; //$orbit-caption-border-radius
+
+        p {
+            padding: 2em; // $orbit-caption-padding;
+        }
+    }
+}
+
+.universslide3 {
+    .ecommerce-product-slider {
+
+        .orbit-previous,
+        .orbit-next {
+            color: $orbit-control-color;
+
+            &:hover {
+                color: $orbit-control-hover-color;
+            }
+        }
+
+        .product-card-thumbnail {
+            display: block;
+            position: relative;
+        }
+
+        .product-card-desc {
+            display: block;
+        }
+
+        .product-card-price {
+            display: inline-block;
+        }
+
+        .product-card-sale {
+            display: inline-block;
+        }
+    }
+}
+
+.universslide4 {
+
+    .orbit .orbit-container {
+        display: flex;
+        height: 38em !important;
+        justify-content: center;
+    }
+
+    .orbit-slide {
+        display: flex;
+        max-height: 38em;
+        max-width: 55em;
+        justify-content: center;
+    }
+
+    .orbit-figure {
+        padding: 1em 0;
+        overflow: visible;
+    }
+
+    .orbit-image {
+        max-height: 35em;
+        object-fit: cover;
+        border-radius: 18px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 15px;
+    }
+
+    .orbit-caption {
+        background-color: white;
+        color: black;
+        height: 36%;
+        width: 63%;
+        padding: 30px 20px;
+        right: 50%; //$orbit-caption-right
+        bottom: 50%;
+        transform: translate(50%, 50%) !important; // $orbit-caption-transform
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .image-author {
+        color: #8c8c8c;
+        font-size: 15px;
+        font-family: "Arial Narrow", Helvetica, sans-serif;
+        overflow: hidden;
+        line-height: 16px;
+        text-align: center;
+    }
+
+    .image-title {
+        color: #1c1c1c;
+        font-size: 38px;
+        font-family: Georgia;
+        overflow: visible;
+        font-weight: 700;
+        line-height: 39px;
+        text-align: center;
+        margin: 0.2em auto;
+    }
+
+    .image-comment {
+        color: #8c8c8c;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        overflow: hidden;
+        line-height: 18px;
+        text-align: center;
+    }
+
+    .orbit-bullets {
+        margin-top: 0;
+
+        button {
+            list-style-type: circle;
+            background-color: transparent;
+            border: 2px solid #1c1c1c;
+            width: 1em;
+            height: 1em;
+            margin: 0.4em;
+
+            &:hover {
+                background-color: #1c1c1c !important;
+            }
+        }
+    }
+
+    button.is-active {
+        background-color: #1c1c1c !important;
+    }
+}

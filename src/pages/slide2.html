@@ -1,0 +1,166 @@
+<div class="grid-container">
+  <div class="row">
+    <div class="columns large-6">
+      <h1>Slide 1 #Démo de base</h1>
+    </div>
+    <div class="columns large-6">
+      <a href="https://get.foundation/sites/docs/orbit.html" class="button"
+        style="padding: 1em 2em;color: #49BFB3;border: 1px solid #49BFB3;background-color: whitesmoke;border-radius: 8px;font-weight: bold;">
+        Aller au tuto
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE LOCAL -->
+<div class="grid-container">
+
+  <div class="cell">
+    <h4>Slide de base, avec contrôles flèches et balles</h4>
+  </div>
+  <!-- Slide construit avec le framework Zurb Foundation -->
+
+  <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+    <div class="orbit-wrapper">
+      <!-- Flèches de défilement gauche et droite -->
+      <div class="orbit-controls">
+        <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+        <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+      </div>
+      <!-- Liste des images et légende associée -->
+      <ul class="orbit-container">
+        <li class="is-active orbit-slide">
+          <figure class="orbit-figure">
+            <img class="orbit-image" src="https://placehold.it/1200x600/999?text=Slide-1" alt="Space">
+            <figcaption class="orbit-caption">légende 1</figcaption>
+          </figure>
+        </li>
+        <li class="orbit-slide">
+          <figure class="orbit-figure">
+            <img class="orbit-image" src="https://placehold.it/1200x600/888?text=Slide-2" alt="Space">
+            <figcaption class="orbit-caption">légende 2</figcaption>
+          </figure>
+        </li>
+        <li class="orbit-slide">
+          <figure class="orbit-figure">
+            <img class="orbit-image" src="https://placehold.it/1200x600/777?text=Slide-3" alt="Space">
+            <figcaption class="orbit-caption">légende 3</figcaption>
+          </figure>
+        </li>
+      </ul>
+    </div>
+    <!-- Balles qui permettent la navigation entre les slides -->
+    <nav class="orbit-bullets">
+      <button class="is-active" data-slide="0">
+        <span class="show-for-sr">First slide details.</span>
+        <span class="show-for-sr" data-slide-active-label>Current Slide</span>
+      </button>
+      <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+      <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+    </nav>
+  </div>
+</div>
+
+<!-- SLIDE POUR WORDPRESS, faire bouger les légendes  -->
+<div class="grid-container universslide2">
+
+  <div class="cell">
+    <h4>Slide de base, Jouer avec les légendes </h4>
+  </div>
+
+  <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+    <div class="orbit-wrapper">
+      <div class="orbit-controls" style="display: flex; justify-content: center;">
+        <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+        <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+      </div>
+      <ul class="orbit-container" style="height: 36em;">
+        <li class="is-active orbit-slide">
+          <figure class="orbit-figure">
+            <img
+              src="https://storage.googleapis.com/assets-monsite-medias/monsitemoncommerce.com-demo/2020/10/2754d90c-istock-1211428560-900x400.jpg"
+              alt="" width="900" height="400" class="size-postlarge wp-image-218 orbit-image" style="height: 36em;" />
+            <figcaption class="orbit-caption">
+              <p> 
+              <img src="https://storage.googleapis.com/assets-monsite-medias/monsitemoncommerce.com-demo/2020/10/66f5d353-hand-made-150x150.jpg" alt="" width="50" height="50" class="alignnone size-thumbnail wp-image-305" style="border-radius: 50%; padding-right: 0.3em;"/>
+                Légende 1</p></figcaption>
+          </figure>
+        </li>
+        <li class="orbit-slide">
+          <figure class="orbit-figure">
+            <img
+              src="https://storage.googleapis.com/assets-monsite-medias/monsitemoncommerce.com-demo/2020/10/e19ea729-istock-1189414137-900x400.jpg"
+              alt="" width="900" height="400" class="alignnone size-postlarge wp-image-211 orbit-image"
+              style="height: 36em;" />
+            <figcaption class="orbit-caption"><p> Légende 2</p></figcaption>
+          </figure>
+        </li>
+        <li class="orbit-slide">
+          <figure class="orbit-figure">
+            <img
+              src="https://storage.googleapis.com/assets-monsite-medias/monsitemoncommerce.com-demo/2020/10/b65ebab6-istock-494542821-900x400.jpg"
+              alt="" width="900" height="400" class="alignnone size-postlarge wp-image-210 orbit-image"
+              style="height: 36em;" />
+            <figcaption class="orbit-caption"><p> Légende 3</p></figcaption>
+          </figure>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <hr />
+</div>
+
+<!-- SLIDE POUR WORDPRESS  -->
+<!-- Slide de base, avec contrôles flèches et balles -->
+<div class="grid-container" style="margin-top: 2em; margin-bottom: 2em;">
+
+  <div class="grid-x">
+    <h4>2. Slide de base, avec contrôles flèches et balles</h4>
+  </div>
+
+  <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+    <div class="orbit-wrapper">
+      <div class="orbit-controls" style="display: flex; justify-content: center;">
+        <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+        <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+      </div>
+      <ul class="orbit-container" style="height: 36em;">
+        <li class="is-active orbit-slide">
+          <figure class="orbit-figure">
+            <img
+              src="https://storage.googleapis.com/assets-monsite-medias/monsitemoncommerce.com-demo/2020/10/2754d90c-istock-1211428560-900x400.jpg"
+              alt="" width="900" height="400" class="size-postlarge wp-image-218 orbit-image" style="height: 36em;" />
+            <figcaption class="orbit-caption">légende 1</figcaption>
+          </figure>
+        </li>
+        <li class="orbit-slide">
+          <figure class="orbit-figure">
+            <img
+              src="https://storage.googleapis.com/assets-monsite-medias/monsitemoncommerce.com-demo/2020/10/e19ea729-istock-1189414137-900x400.jpg"
+              alt="" width="900" height="400" class="alignnone size-postlarge wp-image-211 orbit-image"
+              style="height: 36em;" />
+            <figcaption class="orbit-caption">légende 2</figcaption>
+          </figure>
+        </li>
+        <li class="orbit-slide">
+          <figure class="orbit-figure">
+            <img
+              src="https://storage.googleapis.com/assets-monsite-medias/monsitemoncommerce.com-demo/2020/10/b65ebab6-istock-494542821-900x400.jpg"
+              alt="" width="900" height="400" class="alignnone size-postlarge wp-image-210 orbit-image"
+              style="height: 36em;" />
+            <figcaption class="orbit-caption">légende 3</figcaption>
+          </figure>
+        </li>
+      </ul>
+    </div>
+    <nav class="orbit-bullets" style="display: flex; justify-content: center;">
+      <button class="is-active" data-slide="0">
+        <span class="show-for-sr">First slide details.</span>
+        <span class="show-for-sr" data-slide-active-label>Current Slide</span>
+      </button>
+      <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+      <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+    </nav>
+  </div>
+  <hr />
+</div>

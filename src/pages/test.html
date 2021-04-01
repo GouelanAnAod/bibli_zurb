@@ -1,0 +1,37 @@
+<div class="grid-container">
+   
+    <div class="grid-x">
+        <div class="cell">
+          <h2>Multiple Targets</h2>
+      
+          <p>The data-toggle, data-close, and data-open attributes can now target multiple elements! The syntax is simple; just pass a space separated list to the data-x attribute. Then the elements with ids of foo, bar, and baz will be toggled any time your button,
+            (or any other element you choose), is clicked.</p>
+      
+          <p><button class="button primary" data-toggle="thumb1 thumb2 thumb3">Toggle All These</button></p>
+      
+          <div class="grid-x">
+            <div class="small-4 columns">
+              <img class="thumbnail" id="thumb1" data-toggler data-animate="hinge-in-from-top spin-out" src="https://foundation.zurb.com/sites/docs/assets/img/thumbnail/01.jpg" alt="Photo of Uranus.">
+            </div>
+            <div class="small-4 columns">
+              <img class="thumbnail" id="thumb2" data-toggler data-animate="hinge-in-from-top spin-out" src="https://foundation.zurb.com/sites/docs/assets/img/thumbnail/02.jpg" alt="Photo of Uranus.">
+            </div>
+            <div class="small-4 columns">
+              <img class="thumbnail" id="thumb3" data-toggler data-animate="hinge-in-from-top spin-out" src="https://foundation.zurb.com/sites/docs/assets/img/thumbnail/03.jpg" alt="Photo of Uranus.">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="grid-x padding-1 align-middle">
+        <a href="#" class="button primary" data-toggle="slide1 slide2">Pannel Slide</a>
+        <div data-toggler data-animate="slide-in-down slide-out-up" id="slide1" class="callout secondary">
+            <p>This panel slides.</p>
+        </div>
+        <div data-toggler data-animate="fade-in fade-out" id="slide2" class="callout warning padding-left-1">
+            <p>This panel slides.</p>
+        </div>
+    </div>
+
+</div>

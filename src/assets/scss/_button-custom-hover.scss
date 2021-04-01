@@ -1,0 +1,514 @@
+@import 'settings';
+@import '../../../node_modules/foundation-sites/scss/components/button';
+
+
+
+/* ___________________________________________________________________________
+ 
+ ***************************** BOUTONS DE BASE *******************************
+ ___________________________________________________________________________*/
+
+// Bouton  basique, qui prend en couleur les paramètres de customization sass
+@mixin basic-btn () {
+    display: inline-block;
+    vertical-align: middle;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    margin: $button-margin;
+    /* $button-margin  */
+    padding: $button-padding;
+    /* $button-padding */
+    border: $button-border;
+    /* $button-border */
+    border-color: transparent;
+    border-radius: $button-radius;
+    /* $button-radius */
+    -webkit-transition: $button-transition;
+    transition: $button-transition;
+    /* $button-transition */
+    text-align: center;
+    font-family: $button-font-family;
+    /* $button-font-family */
+    font-weight: $button-font-weight;
+    /*$button-font-weight */
+    line-height: $button-line-height;
+    /* $line-height */
+    -webkit-appearance: none;
+    cursor: pointer;
+
+    // Taille dynamique du bouton
+    @each $size,
+    $value in map-remove($button-sizes, default) {
+        &.#{$size} {
+            font-size: $value;
+            /* $button-sizes */
+        }
+    }
+
+}
+
+// Bouton simple, sans classe ajouté
+@mixin base {
+    @include basic-btn;
+    color: $button-color;
+    /*  $button-color */
+    background-color: $button-background;
+    /* $button-background */
+    border: $button-border;
+    /* $button-border */
+}
+
+// Bouton avec un fond plein
+@mixin full ($color-palette) {
+    @include basic-btn;
+    color: $button-color;
+    /* $button-color */
+    background-color: $color-palette;
+    /* Couleur de la palette */
+    border-color: transparent;
+}
+
+// Bouton avec un fond transparent
+@mixin empty ($color-palette) {
+    @include basic-btn;
+    color: $color-palette;
+    /* Couleur de la palette */
+    background-color: transparent;
+    border-color: $color-palette;
+    /* Couleur de la palette */
+}
+
+.btn {
+
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include base;
+        }
+    }
+}
+
+.btn-full {
+
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include full($color-palette);
+        }
+    }
+}
+
+.btn-empty {
+
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include empty($color-palette);
+        }
+    }
+}
+
+
+.btn-test {
+
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include basic-btn();
+        }
+    }
+}
+/* ___________________________________________________________________________
+ 
+ ********************* CHANGEMENT DE COULEUR EN STATIC ***********************
+ ___________________________________________________________________________*/
+
+// Ajoute "tiret + nom de la couleur de palette" à la suite du nom de la classe
+// ex: .btn-color-primary
+@mixin btn-static ($attribute) {
+
+    @each $name,
+    $hex in $foundation-palette {
+        &-#{$name} {
+            #{$attribute}: $hex !important;
+            // #{$attribute}: $hex ;
+
+        }
+    }
+}
+
+.btn-color {
+    @include btn-static($attribute: 'color');
+}
+
+.btn-bg {
+    @include btn-static($attribute: 'background-color');
+
+    &:before {
+        @include btn-static($attribute: 'background-color');
+    }
+}
+
+.btn-border {
+    @include btn-static($attribute: 'border-color');
+}
+
+.btn-shadow {
+    box-shadow: $button-box-shadow;
+    /* $button-box-shadow */
+}
+
+
+
+
+/* ___________________________________________________________________________
+ 
+ ********************* CHANGEMENT DE COULEUR AU SURVOL ***********************
+ ___________________________________________________________________________*/
+
+@mixin btn-hover ($attribute) {
+
+    @each $name,
+    $hex in $foundation-palette {
+        &-#{$name} {
+            &:hover {
+                #{$attribute}: $hex !important;
+            }
+        }
+    }
+}
+
+.color-hover {
+    @include btn-hover($attribute: 'color');
+}
+
+.bg-hover {
+    @include btn-hover($attribute: 'background-color');
+}
+
+.border-hover {
+    @include btn-hover($attribute: 'border-color');
+}
+
+/* ___________________________________________________________________________
+ 
+ ************************ TRANSPARENCE AU SURVOL  ****************************
+ ___________________________________________________________________________*/
+
+.color-hover-transparent {
+    &:hover {
+        color: transparent !important;
+    }
+}
+
+.bg-hover-transparent {
+    &:hover {
+        background-color: transparent !important;
+    }
+}
+
+
+.border-hover-transparent {
+    &:hover {
+        border-color: transparent !important;
+    }
+}
+
+/* ___________________________________________________________________________
+ 
+ ****************************** NONE AU SURVOL  ******************************
+ ___________________________________________________________________________*/
+
+.color-hover-none {
+    &:hover {
+        color: none !important;
+    }
+}
+
+.bg-hover-none {
+    &:hover {
+        background-color: none !important;
+    }
+}
+
+.border-hover-none {
+    &:hover {
+        border-color: none !important;
+    }
+}
+
+/* ___________________________________________________________________________
+ 
+ ****************************** OMBRE AU SURVOL  ******************************
+ ___________________________________________________________________________*/
+
+
+.shadow-hover {
+    &:hover {
+        box-shadow: $button-box-shadow-hover;
+        /* $button-box-shadow-hover */
+    }
+}
+
+/* ___________________________________________________________________________
+ 
+ ********************* EFFET DE SCALE DOWN AU SURVOL *************************
+ ___________________________________________________________________________*/
+
+// Placeholder transform scale = 0
+%scale-transform-0 {
+    -ms-transform: scale(0, 0);
+    -webkit-transform: scale(0, 0);
+    transform: scale(0, 0);
+}
+
+// Placeholder transform scale = 1
+%scale-transform-1 {
+    -ms-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+
+// Placeholder du contenu scale::before
+%scale-before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: inline-block;
+    border-color: none;
+    border-radius: $button-radius;
+    /* $button-radius */
+    transition: $button-transition;
+    /* button-transition */
+    -webkit-transition: $button-transition;
+    /* button-transition */
+}
+
+@mixin scale-down ($color-palette) {
+    @include basic-btn();
+
+    color: $button-color;
+    /* $button-color */
+    border-color: transparent;
+    z-index: 2;
+    position: relative;
+    -webkit-transition: none;
+    transition: none;
+
+    &::before {
+        @extend %scale-before;
+        @extend %scale-transform-1;
+        background-color: $color-palette;
+        /* Couleur de la palette */
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color-palette;
+        /* Couleur de la palette */
+        border-color: $color-palette;
+        /* Couleur de la palette */
+        background-color: transparent;
+
+        &:before {
+            background-color: transparent;
+            @extend %scale-transform-0;
+        }
+    }
+}
+
+.hover-scale-down {
+
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include scale-down($color-palette);
+        }
+    }
+}
+
+/* ___________________________________________________________________________
+ 
+ ********************* EFFET DE SCALE UP AU SURVOL *************************
+ ___________________________________________________________________________*/
+
+@mixin scale-up ($color-palette) {
+    @include basic-btn();
+
+    color: $color-palette;
+    /* Couleur de la palette */
+    border-color: $color-palette;
+    /* Couleur de la palette */
+    z-index: 1;
+    position: relative;
+    -webkit-transition: $button-transition;
+    /* $button-transition */
+    transition: $button-transition;
+    /* $button-transition */
+
+
+    &::before {
+        @extend %scale-before;
+        @extend %scale-transform-0;
+        background-color: transparent;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: automatic-color(auto, $color-palette);
+        /* Couleur de la palette */
+        border-color: $color-palette;
+        /* Couleur de la palette */
+
+        &:before {
+            background-color: $color-palette;
+            /* Couleur de la palette */
+            @extend %scale-transform-1;
+        }
+    }
+}
+
+.hover-scale-up {
+
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include scale-up($color-palette);
+        }
+    }
+}
+
+/* ___________________________________________________________________________
+ 
+ ************************* EFFET EXTEND AU SURVOL ****************************
+ ___________________________________________________________________________*/
+
+// Placeholder transform scale = 1.2
+%scale-transform-1-2 {
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+@mixin extend {
+    @extend %scale-transform-1;
+
+    &:hover,
+    &:focus,
+    &:active {
+        @extend %scale-transform-1-2;
+        z-index: 1;
+
+    }
+}
+
+.hover-extend {
+
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include extend;
+        }
+    }
+}
+
+/* ___________________________________________________________________________
+ 
+ ************************* EFFET ANIMATION ANIMISTA **************************
+ ___________________________________________________________________________*/
+
+ /* ----------------------------------------------
+ * Generated by Animista on 2021-3-18 16:3:56
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation heartbeat
+ * ----------------------------------------
+ */
+@-webkit-keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  @keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+
+  .heartbeat {
+      &:hover{
+
+          -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+          animation: heartbeat 1.5s ease-in-out infinite both;
+        }
+}

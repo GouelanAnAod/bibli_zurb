@@ -1,0 +1,1102 @@
+@import 'settings';
+@import '../../../node_modules/foundation-sites/scss/components/button';
+
+/* ___________________________________________
+ 
+ ******************* MIXINS *****************
+ _____________________________________________*/
+
+// IMPORTANTS : Les effets ne fonctionnent que lors de l'ajout d'un sélecteur de palette !! (primary, secondary, etc)
+
+/* -------------------------------------
+     BOUTON DE BASE
+------------------------------------- */
+
+@mixin basic-button () {
+    display: inline-block;
+    vertical-align: middle;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    box-shadow: $button-box-shadow; /* $button-box-shadow */
+    margin: $button-margin; /* $button-margin  */
+    padding: $button-padding; /* $button-padding */
+    border: $button-border; /* $button-border */
+    border-radius: $button-radius; /* $button-radius */
+    -webkit-transition: $button-transition;
+    transition: $button-transition; /* $button-transition */
+    text-align: center;
+    font-family: $button-font-family; /* $button-font-family */
+    font-weight: $button-font-weight; /*$button-font-weight */
+    font-size: .9rem;
+    line-height: $button-line-height; /* $line-height */
+    -webkit-appearance: none;
+    cursor: pointer;
+
+    &:hover {
+    box-shadow: $button-box-shadow-hover; /* $button-box-shadow-hover */
+    }
+}
+
+// -------------------------------------
+//     FONCTIONS
+// ------------------------------------- 
+
+// La couleur du texte est sélectionnée automatiquement entre les variables $button-color et 
+// $button-color-alt, pour obtenir le meilleure contraste entre le texte et la couleur du background */
+// color: automatic-color(auto, $color-palette); /* $button-color ou $button-color-alt (automatique selon contraste) */
+@function automatic-color($color, $color-palette) {
+    @if $color==auto {
+        $color: color-pick-contrast($color-palette, ($button-color, $button-color-alt));
+    }
+
+    @return $color;
+}
+
+// La bordure est de la couleur de la palette, 
+// sauf s'il n'y a pas de bordure dans la variable $button-border-color-hover 
+// border-color: border-color-palette($button-border-color-hover, $color-palette); /* Couleur de la palette (sauf si $button-border-color-hover = "none" ou "transparent" */
+@function border-color-palette($button-border-color-hover, $color-palette) {
+    @if $button-border-color-hover !=none and $button-border-color-hover !=transparent {
+        $button-border-color-hover: $color-palette;
+    }
+
+    @return $button-border-color-hover;
+}
+
+// La bordure est de la couleur $button-color-hover 
+// sauf s'il n'y a pas de bordure dans la variable $button-border-color-hover 
+// Permet une couleur de bordure identique pour tous les boutons
+@function border-color-solid($button-border-color-hover, $button-color-hover) {
+    @if $button-border-color-hover !=none and $button-border-color-hover !=transparent {
+        $button-border-color-hover: $button-color-hover;
+    }
+
+    @return $button-border-color-hover;
+}
+
+// Dans les cas où le bouton doit avoir une bordure, si la variable de couleur de la bordure
+//   au survol est paramétrée en "none" ou "transparent", alors la couleur bascule sur $button-color-hover
+// border-color : border-color-hover ($button-border-color-hover, $button-color-hover); /* $button-border-color-hover*** */
+@function border-color-hover($button-border-color-hover, $button-color-hover) {
+    @if $button-border-color-hover == none or $button-border-color-hover ==transparent {
+        $button-border-color-hover: $button-color-hover;
+    }
+
+    @return $button-border-color-hover;
+}
+
+/* -------------------------------------
+    1. STYLE-1
+    Les boutons conservent la couleur de la palette au survol
+------------------------------------- */
+
+// 1.BOUTON PLEIN
+// <!-- Bouton 1 -->
+@mixin full-to-empty-1 ($color-palette) {
+    @include basic-button();
+
+    color: automatic-color(auto, $color-palette); /* $button-color ou $button-color-alt (automatique selon contraste) */
+    background-color: $color-palette; /* Couleur de la palette */
+    border-color:  $color-palette; /* Couleur de la palette */
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color-palette; /* Couleur de la palette */
+        background-color: transparent;
+        border-color: $color-palette; /* Couleur de la palette */
+    }
+}
+
+
+// 1.BOUTON TRANSPARENT
+// <!-- Bouton 2 -->
+@mixin empty-to-full-1($color-palette) {
+    @include basic-button();
+
+    color: $color-palette; /* Couleur de la palette */
+    background-color: transparent;
+    border-color: $color-palette; /* Couleur de la palette */
+
+    &:hover,
+    &:focus,
+    &:active {
+        background: $color-palette; /* Couleur de la palette */
+        color: automatic-color(auto, $color-palette); /* $button-color ou $button-color-alt (automatique selon contraste) */ 
+        border-color: $color-palette; /* Couleur de la palette */
+    }
+}
+
+// 1.BOUTON PLEIN AVEC BORDURE
+// <!-- Bouton 1 bis -->
+@mixin full-to-empty-1-border-plain ($color-palette) {
+    @include basic-button();
+
+    color: automatic-color(auto, $color-palette); /* $button-color ou $button-color-alt (automatique selon contraste) */
+    background-color: $color-palette; /* Couleur de la palette */
+    border-color:  $color-palette; /* Couleur de la palette */
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color-palette; /* Couleur de la palette */
+        background-color: transparent;
+        border-color: $button-border-color-hover; /* $button-border-color-hover */
+    }
+}
+
+
+// 1.BOUTON TRANSPARENT AVEC BORDURE
+// <!-- Bouton 2 bis -->
+@mixin empty-to-full-1-border-plain($color-palette) {
+    @include basic-button();
+
+    color: $color-palette; /* Couleur de la palette */
+    background-color: transparent;
+    border-color: $color-palette; /* Couleur de la palette */
+
+    &:hover,
+    &:focus,
+    &:active {
+        background: $color-palette; /* Couleur de la palette */
+        color: automatic-color(auto, $color-palette); /* $button-color ou $button-color-alt (automatique selon contraste) */ 
+        border-color: $button-border-color-hover; /* $button-border-color-hover */
+    }
+}
+
+
+/* -------------------------------------
+    2. STYLE-2
+    Au survol, les boutons ont une couleur de fond identique, et conservent la couleur de la police en palette
+------------------------------------- */
+
+// 2.BOUTON PLEIN
+// <!-- Bouton 3 -->
+
+@mixin full-to-empty-2 ($color-palette) {
+    @include basic-button();
+
+    color: $button-background-hover; /* $button-background-hover */
+    background-color: $color-palette; /* Couleur de la palette */
+    border-color: $color-palette; /* Couleur de la palette */
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $button-background-hover; /* $button-background-hover */
+        color: $color-palette; /* Couleur de la palette */
+        border-color: $color-palette; /* Couleur de la palette */
+    }
+}
+
+// 2.BOUTON TRANSPARENT
+// <!-- Bouton 4 -->
+@mixin empty-to-full-2 ($color-palette) {
+    @include basic-button();
+
+    color: $color-palette; /* Couleur de la palette */
+    background-color: transparent;
+    border-color: $color-palette; /* Couleur de la palette */
+
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: $color-palette;  /* Couleur de la palette */
+        background-color: $button-background-hover; /* $button-background-hover */
+        color: $color-palette; /* Couleur de la palette */
+    }
+}
+
+// 2.BOUTON PLEIN AVEC BORDURE
+// <!-- Bouton 3 bis -->
+
+@mixin full-to-empty-2-border-plain ($color-palette) {
+    @include basic-button();
+
+    color: $button-background-hover; /* $button-background-hover */
+    background-color: $color-palette; /* Couleur de la palette */
+    border-color: $color-palette; /* Couleur de la palette */
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $button-background-hover; /* $button-background-hover */
+        color: $color-palette; /* Couleur de la palette */
+        border-color: $button-border-color-hover; /* $button-border-color-hover */
+    }
+}
+
+// 2.BOUTON TRANSPARENT AVEC BORDURE
+// <!-- Bouton 4 bis -->
+@mixin empty-to-full-2-border-plain ($color-palette) {
+    @include basic-button();
+
+    color: $color-palette; /* Couleur de la palette */
+    background-color: transparent;
+    border-color: $color-palette; /* Couleur de la palette */
+
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: $color-palette;  /* Couleur de la palette */
+        background-color: $button-background-hover; /* $button-background-hover */
+        border-color: $button-border-color-hover; /* $button-border-color-hover */
+    }
+}
+
+
+/* -------------------------------------
+    3.STYLE-3
+    Background, textes et polices identiques au survol pour tous les boutons.
+------------------------------------- */
+
+
+// 3.BOUTON PLEIN
+// <!-- Bouton 5 -->
+@mixin full-to-empty-3 ($color-palette) {
+
+    @include basic-button();
+    color: $button-background-hover; /* $button-background-hover */ 
+    background-color: $color-palette; /* Couleur de la palette */
+    border-color: $color-palette; /* Couleur de la palette */
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $button-color-hover; /* $button-color-hover */
+        background-color: $button-background-hover; /* $button-background-hover */
+        border-color :  $button-color-hover; /* $button-color-hover */
+    }
+}
+
+
+// 3.BOUTON TRANSPARENT
+// <!-- Bouton 6 -->
+@mixin empty-to-full-3 ($color-palette) {
+
+    @include basic-button();
+    color: $color-palette; /* Couleur de la palette */
+    background-color: transparent;
+    border-color: $color-palette; /* Couleur de la palette */
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $button-color-hover; /* $button-color-hover */
+        background-color: transparent;
+        border-color: $button-color-hover; /* $button-color-hover */
+    }
+}
+
+
+
+/* -------------------------------------
+    4.STYLE-4
+    Au survol, le fond prend la couleur de la bordure. La couleur du texte reste identique.
+------------------------------------- */
+
+// 4.BOUTON PLEIN
+// <!-- Bouton 7 -->
+@mixin full-to-empty-4 ($color-palette) {
+
+    @include basic-button();
+    color: $button-color; /*  $button-color */
+    background-color: $color-palette; /* Couleur de la palette */
+    border-color : $color-palette; /* Couleur de la palette */
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $button-color; /*  $button-color */
+        background-color: transparent;
+        border-color: $color-palette; /* Couleur de la palette */
+    }
+}
+
+
+// 4.BOUTON TRANSPARENT
+// <!-- Bouton 8 -->
+@mixin empty-to-full-4 ($color-palette) {
+
+    @include basic-button();
+    color: $button-color; /*  $button-color */
+    background-color: transparent;
+    border-color: $color-palette; /* Couleur de la palette */
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $color-palette; /* Couleur de la palette */
+    }
+}
+
+
+/* -------------------------------------
+    5.STYLE SCALE
+    Boutons couleur de la palette, effet de disparition du fond vers le centre.
+------------------------------------- */
+
+// ********************** MIXINS ET PLACEHOLDER DU BOUTON SCALE ********************** //
+
+// Placeholder transform scale = 0
+%scale-transform-0 {
+    -ms-transform: scale(0, 0);
+    -webkit-transform: scale(0, 0);
+    transform: scale(0, 0);
+}
+
+// Placeholder transform scale = 1
+%scale-transform-1 {
+    -ms-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+
+// Placeholder transform scale = 1.04 / 1.06
+%scale-transform-1-06 {
+    -ms-transform: scale(1.04, 1.06);
+    -webkit-transform: scale(1.04, 1.06);
+    transform: scale(1.04, 1.06);
+}
+
+// Placeholder du contenu ::before
+%scale-before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: inline-block;
+    border-color: none;
+    border-radius: $button-radius; /* $button-radius */
+    transition: $button-transition; /* button-transition */
+    -webkit-transition: $button-transition; /* button-transition */
+
+}
+
+@mixin scale-border-palette ($color-palette) {
+    color: $color-palette; /* Couleur de la palette */
+    border-color:  $color-palette; /* Couleur de la palette */
+    background-color: $button-background-hover; /* $button-background-hover */
+}
+
+@mixin scale-border-plain ($color-palette) {
+    border-color : border-color-hover($button-border-color-hover, $button-color-hover); /* $button-border-color-hover*** */
+    color : border-color-hover($button-border-color-hover, $button-color-hover); /* $button-border-color-hover*** */
+    background-color: $button-background-hover; /* $button-background-hover */
+}
+
+// Bouton de base pour les classes .scale-full
+@mixin basic-btn-scale-full ($color-palette){
+    @include basic-button();
+
+    color: automatic-color(auto, $color-palette); /* $button-color ou $button-color-alt (automatique selon contraste) */
+    z-index: 2;
+    position: relative;
+    border-color:  transparent;
+    -webkit-transition: $button-transition;
+    transition: $button-transition; /* button-transition */
+
+    &::before {
+        @extend %scale-before;
+        @extend %scale-transform-1-06 ;
+
+        background-color: $color-palette; /* Couleur de la palette */
+    }
+}
+
+// Bouton de base pour les classes .btn-scale-empty
+@mixin basic-btn-scale-empty ($color-palette){
+    @include basic-button();
+
+    color: $color-palette; /* Couleur de la palette */
+    border-color: $color-palette; /* Couleur de la palette */
+    z-index: 2;
+    position: relative;
+    -webkit-transition: $button-transition;
+    transition: $button-transition; /* $button-transition */
+
+
+    &::before {
+        @extend %scale-before;
+        @extend %scale-transform-0 ;
+
+        background-color: transparent; 
+    }
+}
+
+
+
+// Les mixins .scale et .scale-empty sont strictement identiques
+// Certains sites ont été codés avec le mixin correspondant à .scale
+// Dorénavant, préférer le mixin associé à la classe .scale-empty
+@mixin scale ($color-palette) {
+    @include basic-button();
+
+    color: $button-color; /* $button-color */
+    z-index: 2;
+    position: relative;
+    -webkit-transition: $button-transition;
+    transition: $button-transition; /* button-transition */
+    border-color:  transparent;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: $color-palette; /* Couleur de la palette */
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        z-index: -1;
+        display: inline-block;
+        margin: $button-margin; /* $button-margin  */
+        padding: $button-padding; /* $button-padding */
+        border-radius: $button-radius; /* $button-radius */
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color-palette; /* Couleur de la palette */
+        border-color:  $color-palette; /* Couleur de la palette */
+
+        &:before {
+            background-color: $color-palette; /* Couleur de la palette */
+            @extend %scale-transform-0;
+        }
+        border-color:  $color-palette; /* Couleur de la palette */
+    }
+}
+
+// ********************** DÉCLINAISONS DU BOUTON SCALE ********************** //
+
+// 5.BOUTON PLEIN
+// <!-- Bouton 9 -->
+@mixin scale-full ($color-palette) {
+    @include basic-btn-scale-full ($color-palette);
+
+    &:hover,
+    &:focus,
+    &:active  {
+        color: $color-palette; /* Couleur de la palette */
+        border-color: $color-palette; /* Couleur de la palette */
+        background-color: transparent;
+
+        &:before {
+            background-color: transparent;
+            @extend %scale-transform-0;
+        }
+    }
+}
+
+// 5.BOUTON VIDE
+// <!-- Bouton 10 -->
+@mixin scale-empty ($color-palette) {   
+    @include basic-btn-scale-empty($color-palette);
+
+    &:hover,
+    &:focus,
+    &:active  {
+        color: automatic-color(auto, $color-palette); /* Couleur de la palette */
+        border-color:  $color-palette; /* Couleur de la palette */
+
+        &:before {
+            background-color: $color-palette; /* Couleur de la palette */
+            @extend %scale-transform-1-06 ;
+        }
+    }
+}
+
+// 5.BOUTON PLEIN BORDURE COULEUR PALETTE
+// <!-- Bouton 11 -->
+@mixin scale-full-border-palette ($color-palette) {
+    @include basic-btn-scale-full ($color-palette);
+
+    &:hover,
+    &:focus,
+    &:active  {
+    @include scale-border-palette ($color-palette);
+
+        &:before {
+            background-color: $color-palette; /* Couleur de la palette */
+            @extend %scale-transform-0;
+        }
+    }
+}
+
+// 5.BOUTON VIDE BORDURE COULEUR PALETTE
+// <!-- Bouton 12-->
+@mixin scale-empty-border-palette ($color-palette) {
+    @include basic-btn-scale-empty($color-palette);
+
+    &:hover,
+    &:focus,
+    &:active  {
+        color: $color-palette; /* Couleur de la palette */
+        border-color:  $color-palette; /* Couleur de la palette */
+        background-color: $button-background-hover; /* $button-background-hover */
+
+        &:before {
+            background-color: $button-background-hover; /* $button-background-hover */
+            @extend %scale-transform-1;
+        }
+    }
+}
+
+// 5.BOUTON PLEIN STYLE UNI
+// <!-- Bouton 13 -->
+@mixin scale-full-plain ($color-palette) {
+    @include basic-btn-scale-full ($color-palette);
+
+    &:hover,
+    &:focus,
+    &:active  {
+        color: $button-color-hover; /* $button-color-hover */
+        border-color:  transparent; 
+        background-color: $button-background-hover; /* $button-background-hover */
+
+        &:before {
+            background-color: $color-palette; /* Couleur de la palette */
+            @extend %scale-transform-0;
+        }
+    }
+}
+
+// 5.BOUTON VIDE STYLE UNI
+// <!-- Bouton 14 -->
+@mixin scale-empty-plain ($color-palette) {
+    @include basic-btn-scale-empty($color-palette);
+
+    &:hover,
+    &:focus,
+    &:active  {
+        color: $button-color-hover; /* $button-color-hover */
+        border-color:  transparent; 
+
+        &:before {
+            background-color: $button-background-hover; /* $button-background-hover */
+            @extend %scale-transform-1-06 ;
+        }
+    }
+}
+
+// 5.BOUTON PLEIN BORDURE COULEUR UNIE
+// <!-- Bouton 15 -->
+@mixin scale-full-border-plain ($color-palette) {
+    @include basic-btn-scale-full ($color-palette);
+
+    &:hover,
+    &:focus,
+    &:active  {
+        @include scale-border-plain ($color-palette);
+
+        &:before {
+            background-color: $color-palette; /* Couleur de la palette */
+            @extend %scale-transform-0;
+        }
+    }
+}
+
+// 5.BOUTON VIDE BORDURE COULEUR UNIE
+// <!-- Bouton 16-->
+@mixin scale-empty-border-plain ($color-palette) {
+    @include basic-btn-scale-empty($color-palette);
+
+    &:hover,
+    &:focus,
+    &:active  {
+        @include scale-border-plain ($color-palette);
+
+        &:before {
+            background-color: $button-background-hover; /* $button-background-hover */
+            @extend %scale-transform-1;
+        }
+    }
+}
+
+
+/* -------------------------------------
+    6.STYLE EXTEND
+    Boutons couleur de la palette, effet d'agrandissement du bouton au survol.
+------------------------------------- */
+
+// ********************** MIXINS ET PLACEHOLDER DU BOUTON EXTEND ********************** //
+
+// Permet de rester au-dessus de l'environnement à l'agrandissement
+%zindex {
+    z-index: 2;
+}
+
+// Placeholder transform scale = 1.1
+%scale-transform-1-1 {
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+@mixin plain-extend {
+    @extend %scale-transform-1-1;
+    @extend %zindex;
+    color: $button-color-hover; /* $button-color-hover */
+    background-color: $button-background-hover; /* $button-background-hover */
+    border-color: $button-background-hover; /* $button-background-hover */
+}
+
+@mixin border-palette-extend ($color-palette){
+    @extend %scale-transform-1-1;
+    @extend %zindex;
+    color: $color-palette; /* Couleur de la palette */
+    background-color: $button-background-hover; /* $button-background-hover */
+    border-color: $color-palette; /* Couleur de la palette */
+}
+
+@mixin border-plain-extend ($color-palette){
+    @extend %scale-transform-1-1;
+    @extend %zindex;
+    color: $button-border-color-hover; /* $button-border-color-hover */
+    border-color: $button-border-color-hover; /* $button-border-color-hover */
+    background-color: $button-background-hover; /* $button-background-hover */
+}
+
+// Bouton de base pour les classes .extend-full
+@mixin basic-btn-extend-full ($color-palette) {
+    @include basic-button();
+    @extend %scale-transform-1;
+
+    color: automatic-color(auto, $color-palette); /* $button-color ou $button-color-alt (automatique selon contraste) */
+    background-color: $color-palette; /* Couleur de la palette */
+    border-color: $color-palette; /* Couleur de la palette */
+    transition: $button-transition; /* $button-transition */
+    -webkit-transition: $button-transition; /* $button-transition */
+}
+
+// Bouton de base pour les classes .extend-empty
+@mixin basic-btn-extend-empty ($color-palette) {
+    @include basic-button();
+    @extend %scale-transform-1;
+
+    color: $color-palette; /* Couleur de la palette */
+    background-color: transparent;
+    border-color: $color-palette; /* Couleur de la palette */
+    transition: $button-transition; /* $button-transition */
+    -webkit-transition: $button-transition; /* $button-transition */
+}
+
+// ********************** DÉCLINAISONS DU BOUTON EXTEND ********************** //
+
+// 6.BOUTON PLEIN
+// <!-- Bouton 17 -->
+@mixin extend-full($color-palette) {
+    @include basic-btn-extend-full ($color-palette); 
+
+    &:hover,
+    &:focus,
+    &:active  {
+        @extend %scale-transform-1-1;
+        @extend %zindex;
+    }
+}    // @extend %scale-transform-1-2;
+// z-index: 2;
+// color: $button-color-hover; /* $button-color-hover */
+// background-color: $button-background-hover; /* $button-background-hover */
+// border-color: $button-background-hover; /* $button-background-hover */
+
+// 6.BOUTON VIDE
+// <!-- Bouton 18 -->
+@mixin extend-empty($color-palette) {
+    @include basic-btn-extend-empty ($color-palette); 
+
+    &:hover,
+    &:focus,
+    &:active  {
+        @extend %scale-transform-1-1;
+        @extend %zindex;
+    }
+}
+
+// 6.BOUTON PLEIN STYLE UNI
+// <!-- Bouton 19 -->
+@mixin extend-full-plain ($color-palette) {
+    @include basic-btn-extend-full ($color-palette); 
+
+    &:hover,
+    &:focus,
+    &:active {
+        @include plain-extend;
+    }
+}
+
+// 6.BOUTON VIDE STYLE UNI
+// <!-- Bouton 20 -->
+@mixin extend-empty-plain ($color-palette) {
+    @include basic-btn-extend-empty ($color-palette); 
+
+    &:hover,
+    &:focus,
+    &:active  {
+        @include plain-extend;
+    }
+}
+
+// 6.BOUTON PLEIN BORDURE COULEUR PALETTE
+// <!-- Bouton 21 -->
+@mixin extend-full-border-palette ($color-palette) {
+    @include basic-btn-extend-full ($color-palette); 
+
+    &:hover,
+    &:focus,
+    &:active {
+        @include border-palette-extend ($color-palette);
+    }
+}
+
+// 6.BOUTON VIDE BORDURE COULEUR PALETTE
+// <!-- Bouton 22 -->
+@mixin extend-empty-border-palette($color-palette) {
+    @include basic-btn-extend-empty ($color-palette); 
+
+    &:hover,
+    &:focus,
+    &:active {
+        @include border-palette-extend ($color-palette);
+    }
+}
+
+// 6.BOUTON PLEIN BORDURE COULEUR UNIE
+// <!-- Bouton 23 -->
+@mixin extend-full-border-plain ($color-palette) {
+    @include basic-btn-extend-full ($color-palette); 
+
+    &:hover,
+    &:focus,
+    &:active {
+        @include border-plain-extend ($color-palette);
+    }
+}
+
+// 6.BOUTON VIDE BORDURE COULEUR UNIE
+// <!-- Bouton 24 -->
+@mixin extend-empty-border-plain($color-palette) {
+    @include basic-btn-extend-empty ($color-palette); 
+
+    &:hover,
+    &:focus,
+    &:active {
+        @include border-plain-extend ($color-palette);
+    }
+}
+
+
+
+/* __________________________________________
+
+******************* CLASSES *****************
+_____________________________________________*/
+
+
+// -------------------------------------
+// BOUTONS DE STYLES 1
+// ------------------------------------- 
+.btn-1-full {
+    // Applique le style à toutes les couleurs de la palette
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include full-to-empty-1($color-palette);
+        }
+    }
+}
+
+.btn-1-empty {
+
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include empty-to-full-1($color-palette);
+        }
+    }
+}
+
+.btn-1-full-border-plain {
+    // Applique le style à toutes les couleurs de la palette
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include full-to-empty-1-border-plain($color-palette);
+        }
+    }
+}
+
+.btn-1-empty-border-plain {
+
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include empty-to-full-1-border-plain($color-palette);
+        }
+    }
+}
+
+// -------------------------------------
+// BOUTONS DE STYLES 2
+// ------------------------------------- 
+.btn-2-full {
+
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include full-to-empty-2($color-palette);
+        }
+    }
+}
+
+.btn-2-empty {
+
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include empty-to-full-2 ($color-palette);
+        }
+    }
+}
+
+.btn-2-full-border-plain {
+
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include full-to-empty-2-border-plain($color-palette);
+        }
+    }
+}
+
+.btn-2-empty-border-plain {
+
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include empty-to-full-2-border-plain ($color-palette);
+        }
+    }
+}
+
+// -------------------------------------
+// BOUTONS DE STYLES 3
+// ------------------------------------- 
+
+.btn-3-full {
+
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include full-to-empty-3($color-palette);
+        }
+    }
+}
+
+.btn-3-empty {
+
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include empty-to-full-3($color-palette);
+        }
+    }
+}
+
+// -------------------------------------
+// BOUTONS DE STYLES 4
+// ------------------------------------- 
+
+.btn-4-full {
+
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include full-to-empty-4($color-palette);
+        }
+    }
+}
+
+.btn-4-empty {
+
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include empty-to-full-4($color-palette);
+        }
+    }
+}
+
+// -------------------------------------
+// BOUTONS DE STYLES SCALE
+// ------------------------------------- 
+
+// Eviter l'utilisation de cette classe
+// Préférer l'utilisation de la classe .btn-scale-empty (identique)
+.btn-scale {
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include scale($color-palette);
+        }
+    }
+}
+
+.btn-scale-full {
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include scale-full($color-palette);
+        }
+    }
+}
+
+.btn-scale-empty {
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include scale-empty($color-palette);
+        }
+    }
+}
+
+.btn-scale-full-plain {
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include scale-full-plain($color-palette);
+        }
+    }
+}
+
+.btn-scale-empty-plain {
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include scale-empty-plain($color-palette);
+        }
+    }
+}
+
+.btn-scale-full-border-palette  {
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include scale-full-border-palette ($color-palette);
+        }
+    }
+}
+
+.btn-scale-empty-border-palette {
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include scale-empty-border-palette($color-palette);
+        }
+    }
+}
+
+.btn-scale-full-border-plain  {
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include scale-full-border-plain ($color-palette);
+        }
+    }
+}
+
+.btn-scale-empty-border-plain {
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include scale-empty-border-plain($color-palette);
+        }
+    }
+}
+
+// -------------------------------------
+// BOUTONS DE STYLES EXTEND
+// ------------------------------------- 
+
+.btn-extend-full {
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include extend-full($color-palette);
+        }
+    }
+}
+
+.btn-extend-empty {
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include extend-empty($color-palette);
+        }
+    }
+}
+
+.btn-extend-full-plain {
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include extend-full-plain($color-palette);
+        }
+    }
+}
+
+.btn-extend-empty-plain {
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include extend-empty-plain($color-palette);
+        }
+    }
+}
+
+.btn-extend-full-border-palette {
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include extend-full-border-palette ($color-palette);
+        }
+    }
+}
+
+.btn-extend-empty-border-palette {
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include extend-empty-border-palette ($color-palette);
+        }
+    }
+}
+
+.btn-extend-full-border-plain {
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include extend-full-border-plain ($color-palette);
+        }
+    }
+}
+
+.btn-extend-empty-border-plain {
+    @each $name,
+    $color-palette in $button-palette {
+        &.#{$name} {
+            @include extend-empty-border-plain ($color-palette);
+        }
+    }
+}
+
+
+/* @Marine Lambert */

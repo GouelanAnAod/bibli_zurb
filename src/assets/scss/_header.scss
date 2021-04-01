@@ -1,0 +1,68 @@
+/*******************************************
+                HEARDER PERSONNEL
+/*******************************************/
+
+.header {
+    background-color: $light-gray;
+    ._3d {
+        margin: 2rem auto;
+        display: flex;
+        justify-content: start-end;
+        font-family: 'Exo';
+        color: #3CC29B;
+        font-size: calc(100vw / 25);
+        letter-spacing: .015em;
+        text-shadow: 0 0 0 #288269,
+            .0025em .0025em 0 #288269,
+            .005em .005em 0 #288269,
+            .0075em .0075em 0 #288269,
+            .01em .01em 0 #288269,
+            .0125em .0125em 0 #288269,
+            .015em .015em 0 #288269,
+            .0175em .0175em 0 #288269,
+            .02em .02em 0 #288269,
+            .0225em .0225em 0 #288269,
+            .025em .025em 0 #288269,
+            .0275em .0275em 0 #288269,
+            .03em .03em 0 #288269,
+            .0325em .0325em 0 #288269,
+            .035em .035em 0 #288269,
+            .0375em .0375em 0 #288269,
+            .04em .04em 0 #288269,
+            .0425em .0425em 0 #288269,
+            .045em .045em 0 #288269,
+            .0475em .0475em 0 #288269,
+            .05em .05em 0 #288269,
+            .0525em .0525em 0 #288269,
+            .055em .055em 0 #288269,
+            .0575em .0575em 0 #288269,
+            .06em .06em 0 #288269,
+            .0625em .0625em 0 #288269,
+            .065em .065em 0 #288269,
+            .0675em .0675em 0 #288269,
+            .07em .07em 0 #288269,
+            .0725em .0725em 0 #288269,
+            .075em .075em 0 #288269,
+            .0775em .0775em 0 #288269,
+            .08em .08em 0 #288269,
+            .0825em .0825em 0 #288269,
+            .085em .085em 0 #288269,
+            .0875em .0875em 0 #288269,
+            .09em .09em 0 #288269,
+            .0925em .0925em 0 #288269,
+            .095em .095em 0 #288269,
+            .0975em .0975em 0 #288269,
+            .1em .1em 0 #288269
+    }
+
+    a {
+        float: right;
+        margin-right: 2em;
+        padding: 1em 2em;
+        color: #49BFB3;
+        border: 1px solid #49BFB3;
+        background-color: whitesmoke;
+        border-radius: 8px;
+        font-weight: bold;
+    }
+}

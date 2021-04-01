@@ -1,0 +1,725 @@
+<div class="grid-container-fluid margin-top-0" style="background: lightgray">
+    <div class="grid-x grid-padding-x align-middle">
+        <div class="cell medium-6">
+            <h1 class="_3d">#Buttons</h1>
+        </div>
+        <div class="cell medium-6 align-middle">
+            <a href="https://get.foundation/sites/docs/button.html" class="button float-right"
+                style="padding: 1em 2em;color: #49BFB3;border: 1px solid #49BFB3;background-color: whitesmoke;border-radius: 8px;font-weight: bold;"
+                onmouseover="color: gold">
+                Aller au tuto
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="grid-container">
+    <div class="grid-x">
+        <h2>Bibliothèque de boutons</h2>
+    </div>
+    <div class="grid-x margin-vertical-1">
+        <p>Classes du framework Zurb Foundation qui paramètres rapidement l'aspect des boutons.</p>
+        <p>Pour déclarer un bouton et lui injecter des classes supplémentaires, il est nécessaire de lui injecter la
+            classe <code style="color: midnightblue; background-color: whitesmoke; ">.button</code>.</p>
+    </div>
+    <!-- <div class="grid-x align-center">
+        <a class="button-hover-reveal btn-f" role="button" href="/contact/">Contactez-nous</a>
+    </div> -->
+</div>
+
+<!-- Types de boutons -->
+<div class="grid-container">
+    <div class="grid-x bordered padding-vertical-2 width-100">
+        <div class="cell medium-6 text-center">
+            <h5>BOUTONS DE LIENS ANCHOR</h5>
+            <a href=" #" class="button margin-vertical-1">Bouton sans classe ajoutée</a>
+            </br>
+            <code style="color: midnightblue; background-color: whitesmoke; ">&lt;a&gt; href="#" class="button [classes
+                de style]">Lien&lt;/a&gt;</code>
+        </div>
+        <div class="cell medium-6 text-center">
+            <h5>BOUTONS D'ACTION ET DE FORMULAIRES</h5>
+            <button type="button" class="button margin-vertical-1">Bouton sans classe ajoutée</button>
+            </br>
+            <code style="color: midnightblue; background-color: whitesmoke; ">
+                &lt;button&gt; type="button" class="button [submit] [classes de style]">Action&lt;/button&gt;
+            </code>
+        </div>
+    </div>
+</div>
+
+
+<!-- Liste des classes foundation -->
+<div class="grid-container">
+    <div class="grid-x">
+        <ul class="no-bullet width-100">
+            <!-- Boutons basiques -->
+            <li class="margin-top-2 bordered padding-1">
+                <div class="grid-x align-middle">
+                    <p>
+                        <code style="color: midnightblue; background-color: whitesmoke; ">.primary</code>
+                        <code style="color: midnightblue; background-color: whitesmoke; ">.secondary</code>
+                        <code style="color: midnightblue; background-color: whitesmoke; ">.success</code>
+                        <code style="color: midnightblue; background-color: whitesmoke; ">.warning</code>
+                        <code style="color: midnightblue; background-color: whitesmoke; ">.alert</code>
+                        Classes de couleurs, paramétrées dans la palette*
+                    </p>
+                </div>
+                <div class="grid-x align-middle">
+                    <div class="cell medium-6">
+                        <a class="button primary" href="#">Primary</a>
+                        <a class="button secondary" href="#">Secondary</a>
+                        <a class="button success" href="#">Success</a>
+                        <a class="button warning" href="#">Warning</a>
+                        <a class="button alert" href="#">Alert</a>
+                    </div>
+                    <div class="cell medium-6 text-right">
+                        <button type="button" class="button primary">Primary</button>
+                        <button type="button" class="button secondary">Secondary</button>
+                        <button type="button" class="button success">Success</button>
+                        <button type="button" class="button warning">Warning</button>
+                        <button type="button" class="button alert">Alert</button>
+                    </div>
+                </div>
+                <cite class="margin-top-1">
+                    <i>*Les classes citées sont celles paramétrées par défaut dans Foundation. Il est possible de
+                        paramétrer librement les noms et le nombre des couleurs dans la palette, dans
+                        Apparence / Customization sass / 1-Général / foundation-palette</i>
+                </cite>
+            </li>
+            <!-- classe hollow -->
+            <li class="margin-top-2 bordered padding-1">
+                <div class="grid-x align-middle">
+                    <p>
+                        <code style="color: midnightblue; background-color: whitesmoke; ">.hollow</code>
+                        Bouton au fond transparent avec bordure de couleur
+                    </p>
+                </div>
+                <div class="grid-x align-middle">
+                    <div class="cell medium-6">
+                        <a class="button hollow primary" href="#">Primary</a>
+                        <a class="button hollow secondary" href="#">Secondary</a>
+                        <a class="button hollow success" href="#">Success</a>
+                        <a class="button hollow warning" href="#">Warning</a>
+                        <a class="button hollow alert" href="#">Alert</a>
+                    </div>
+                    <div class="cell medium-6 text-right">
+                        <button type="button" class="button hollow primary">Primary</button>
+                        <button type="button" class="button hollow secondary">Secondary</button>
+                        <button type="button" class="button hollow success">Success</button>
+                        <button type="button" class="button hollow warning">Warning</button>
+                        <button type="button" class="button hollow alert">Alert</button>
+                    </div>
+                </div>
+            </li>
+            <!-- classe clear -->
+            <li class="margin-top-2 bordered padding-1">
+                <div class="grid-x align-middle">
+                    <p>
+                        <code style="color: midnightblue; background-color: whitesmoke; ">.clear</code>
+                        Button avec texte uniquement
+                    </p>
+                </div>
+
+                <div class="grid-x align-middle">
+                    <div class="cell medium-6">
+                        <a class="clear button primary" href="#">Primary</a>
+                        <a class="clear button secondary" href="#">Secondary</a>
+                        <a class="clear button success" href="#">Success</a>
+                        <a class="clear button alert" href="#">Alert</a>
+                        <a class="clear button warning" href="#">Warning</a>
+                    </div>
+                    <div class="cell medium-6 text-right">
+                        <button type="button" class="button clear primary">Primary</button>
+                        <button type="button" class="button clear secondary">Secondary</button>
+                        <button type="button" class="button clear success">Success</button>
+                        <button type="button" class="button clear warning">Warning</button>
+                        <button type="button" class="button clear alert">Alert</button>
+                    </div>
+                </div>
+            </li>
+            <!-- classe bordered -->
+            <!-- <li class="margin-top-2 bordered padding-1">
+                <div class="grid-x align-middle">
+                    <p>
+                        <code style="color: midnightblue; background-color: whitesmoke; ">.bordered</code>
+                        Ajoute une bordure
+                    </p>
+                </div>
+                <div class="grid-x align-middle">
+                    <div class="cell medium-6">
+                        <a class="button bordered primary" href="#">Primary</a>
+                        <a class="button bordered secondary" href="#">Secondary</a>
+                        <a class="button bordered success" href="#">Success</a>
+                        <a class="button bordered warning" href="#">Warning</a>
+                        <a class="button bordered alert" href="#">Alert</a>
+                    </div>
+                    <div class="cell medium-6 text-right">
+                        <button type="button" class="button bordered primary">Primary</button>
+                        <button type="button" class="button bordered secondary">Secondary</button>
+                        <button type="button" class="button bordered success">Success</button>
+                        <button type="button" class="button bordered warning">Warning</button>
+                        <button type="button" class="button bordered alert">Alert</button>
+                    </div>
+                </div>
+            </li> -->
+            <!-- classe radius -->
+            <!-- <li class="margin-top-2 bordered padding-1">
+                <div class="grid-x align-middle">
+                    <p>
+                        <code style="color: midnightblue; background-color: whitesmoke; ">.radius</code>
+                        Arrondit légèrement les angles
+                    </p>
+                </div>
+
+                <div class="grid-x align-middle">
+                    <div class="cell medium-6">
+                        <a class="button radius primary" href="#">Primary</a>
+                        <a class="button radius secondary" href="#">Secondary</a>
+                        <a class="button radius success" href="#">Success</a>
+                        <a class="button radius warning" href="#">Warning</a>
+                        <a class="button radius alert" href="#">Alert</a>
+                    </div>
+                    <div class="cell medium-6 text-right">
+                        <button type="button" class="button radius primary">Primary</button>
+                        <button type="button" class="button radius secondary">Secondary</button>
+                        <button type="button" class="button radius success">Success</button>
+                        <button type="button" class="button radius warning">Warning</button>
+                        <button type="button" class="button radius alert">Alert</button>
+                    </div>
+                </div>
+                <cite class="margin-top-1">
+                    <i>Pour modifier les angles de tous les boutons, paramétrer la variable $border-radius dans : "Apparence / Customization sass / 8.Button /
+                        button-radius"</i>
+                </cite>
+            </li> -->
+            <!-- classe rounded -->
+            <li class="margin-top-2 bordered padding-1">
+                <div class="grid-x align-middle">
+                    <p>
+                        <code style="color: midnightblue; background-color: whitesmoke; ">.rounded</code>
+                        Angles très arrondis
+                    </p>
+                </div>
+
+                <div class="grid-x align-middle">
+                    <div class="cell medium-6">
+                        <a class="button rounded primary" href="#">Primary</a>
+                        <a class="button rounded secondary" href="#">Secondary</a>
+                        <a class="button rounded success" href="#">Success</a>
+                        <a class="button rounded warning" href="#">Warning</a>
+                        <a class="button rounded alert" href="#">Alert</a>
+                    </div>
+                    <div class="cell medium-6 text-right">
+                        <button type="button" class="button rounded primary">Primary</button>
+                        <button type="button" class="button rounded secondary">Secondary</button>
+                        <button type="button" class="button rounded success">Success</button>
+                        <button type="button" class="button rounded warning">Warning</button>
+                        <button type="button" class="button rounded alert">Alert</button>
+                    </div>
+                </div>
+            </li>
+            <!-- classe shadow -->
+            <li class="margin-top-2 bordered padding-1">
+                <div class="grid-x align-middle">
+                    <p>
+                        <code style="color: midnightblue; background-color: whitesmoke; ">.shadow</code>
+                        Ombre du bouton
+                    </p>
+                </div>
+
+                <div class="grid-x align-middle">
+                    <div class="cell medium-6">
+                        <a class="button shadow primary" href="#">Primary</a>
+                        <a class="button shadow secondary" href="#">Secondary</a>
+                        <a class="button shadow success" href="#">Success</a>
+                        <a class="button shadow warning" href="#">Warning</a>
+                        <a class="button shadow alert" href="#">Alert</a>
+                    </div>
+                    <div class="cell medium-6 text-right">
+                        <button type="button" class="button shadow primary">Primary</button>
+                        <button type="button" class="button shadow secondary">Secondary</button>
+                        <button type="button" class="button shadow success">Success</button>
+                        <button type="button" class="button shadow warning">Warning</button>
+                        <button type="button" class="button shadow alert">Alert</button>
+                    </div>
+                </div>
+            </li>
+            <!-- classe disabled -->
+            <li class="margin-top-2 bordered padding-1">
+                <div class="grid-x align-middle">
+                    <p>
+                        <code style="color: midnightblue; background-color: whitesmoke; ">.disabled</code>
+                        Désactiver un bouton
+                    </p>
+                </div>
+                <div class="grid-x">
+                    <div class="cell medium-6">
+                        <a class="button primary disabled" href="#" disabled>Disabled</a>
+                        <a class="button disabled" href="#" disabled>Disabled</a>
+                    </div>
+                    <div class="cell medium-6 text-right">
+                        <button type="button" class="button warning disabled" href="#" disabled>Disabled</button>
+                        <button type="button" class="button primary disabled" href="#" disabled>Disabled</button>
+                    </div>
+                </div>
+            </li>
+            <!-- classes de tailles -->
+            <li class="margin-top-2 bordered padding-1">
+                <div class="grid-x align-middle">
+                    <p>
+                        <code style="color: midnightblue; background-color: whitesmoke; ">.tiny</code>
+                        <code style="color: midnightblue; background-color: whitesmoke; ">.small</code>
+                        <code style="color: midnightblue; background-color: whitesmoke; ">.basic</code>
+                        <code style="color: midnightblue; background-color: whitesmoke; ">.large</code>
+                        Taille des boutons
+                    </p>
+                </div>
+
+                <div class="grid-x align-middle">
+                    <div class="cell medium-6">
+                        <a class="button primary tiny" href="#">Très petit</a>
+                        <a class="button primary small" href="#">Petit</a>
+                        <a class="button primary" href="#">Basic</a>
+                        <a class="button primary large" href="#">Large</a>
+                    </div>
+                    <div class="cell medium-6 text-right">
+
+                        <button type="button" class="button primary large" href="#">Large</button>
+                        <button type="button" class="button primary" href="#">Basic</button>
+                        <button type="button" class="button primary small" href="#">Petit</button>
+                        <button type="button" class="button primary tiny" href="#">Très petit</button>
+                    </div>
+                </div>
+            </li>
+            <!-- classe expanded -->
+            <li class="margin-top-2 bordered padding-1">
+                <div class="grid-x align-middle">
+                    <p>
+                        <code style="color: midnightblue; background-color: whitesmoke; ">.expanded</code>
+                        <code style="color: midnightblue; background-color: whitesmoke; ">.small expanded</code>
+                        Boutons qui prend la largeur de la div parente
+                    </p>
+                </div>
+
+                <div class="grid-x align-middle">
+                    <div class="cell medium-6">
+                        <a class="button primary expanded" href="#">Basic étendu longueur div</a>
+                        <a class="button primary small expanded" href="#">Petit étendu longueur div</a>
+                    </div>
+                    <div class="cell medium-6 text-right padding-1">
+                        <button type="button" class="button primary expanded" href="#">Basic étendu longueur
+                            div</button>
+                        <button type="button" class="button primary small expanded" href="#">Petit étendu longueur
+                            div</button>
+                    </div>
+                </div>
+            </li>
+            <!-- Classe animation -->
+            <li class="margin-top-2 bordered padding-1">
+                <div class="grid-x align-middle">
+                    <p>
+                        <code style="color: midnightblue; background-color: whitesmoke; ">.animate__animated
+                            [nom_animation]</code>
+                        Ajouter une animation Animate
+                    </p>
+                </div>
+                <div class="grid-x">
+                    <div class="cell medium-6">
+                        <a class="button warning animate__animated animate__tada" href="#">
+                            Bouton avec animation
+                        </a>
+                    </div>
+                    <div class="cell medium-6 text-right">
+                        <button type="button" class="button warning animate__animated animate__tada" href="#">
+                            Bouton avec animation
+                        </button>
+                    </div>
+                </div>
+            </li>
+            <!-- classe groupe de boutons -->
+            <li class="margin-top-2 bordered padding-1">
+                <div class="grid-x align-middle">
+                    <p>
+                        <code style="color: midnightblue; background-color: whitesmoke; ">.button-group</code>
+                        Groupe de boutons
+                    </p>
+                </div>
+
+                <div class="grid-x">
+                    <div class="cell medium-6">
+                        <div class="button-group">
+                            <a class="button">View</a>
+                            <a class="button success">Edit</a>
+                            <a class="button warning">Share</a>
+                            <a class="button alert">Delete</a>
+                        </div>
+                        <div class="primary button-group">
+                            <a class="button">Bouton 1</a>
+                            <a class="button">Bouton 2</a>
+                            <a class="button">Bouton 3</a>
+                            <a class="button">Bouton 4</a>
+                        </div>
+                    </div>
+
+                    <div class="cell medium-6">
+                        <div class="grid-x align-right button-group">
+                            <button type="button" class="button">View</button>
+                            <button type="button" class="success button">Edit</button>
+                            <button type="button" class="warning button">Share</button>
+                            <button type="button" class="alert button">Delete</button>
+                        </div>
+                        <div class="grid-x align-right primary button-group">
+                            <button type="button" class="button">Bouton 1</button>
+                            <button type="button" class="button">Bouton 2</button>
+                            <button type="button" class="button">Bouton 3</button>
+                            <button type="button" class="button">Bouton 4</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- classe groupe de boutons soudés-->
+            <!-- <li class="margin-top-2 bordered padding-1">
+                <div class="grid-x align-middle">
+                    <p>
+                        <code style="color: midnightblue; background-color: whitesmoke; ">.no-gaps</code>
+                        Groupe de boutons soudés
+                    </p>
+                </div>
+                <div class="grid-x">
+                    <div class="cell medium-6 primary button-group no-gaps">
+                        <div class="grid-x">
+                            <a class="button">Bouton 1</a>
+                            <a class="button">Bouton 2</a>
+                            <a class="button">Bouton 3</a>
+                            <a class="button">Bouton 4</a>
+                        </div>
+                    </div>
+                    <div class="cell medium-6">
+                        <div class="grid-x align-right primary button-group no-gaps">
+                            <button type="button" type="button" class="button">Bouton 1</button>
+                            <button type="button" type="button" class="button">Bouton 2</button>
+                            <button type="button" type="button" class="button">Bouton 3</button>
+                            <button type="button" type="button" class="button">Bouton 4</button>
+                        </div>
+                    </div>
+                </div>
+            </li> -->
+            <!-- classe empilement vertical -->
+            <li class="margin-top-2 bordered padding-1">
+                <div class="grid-x align-middle">
+                    <p>
+                        <code style="color: midnightblue; background-color: whitesmoke; ">.stacked-for-small</code>
+                        Empile les boutons verticalement sur petit écran
+                    </p>
+                </div>
+                <div class="grid-x">
+                    <div class="cell medium-6">
+                        <div class="grid-x primary stacked-for-small button-group">
+                            <a class="button">How</a>
+                            <a class="button">Low</a>
+                            <a class="button">Can</a>
+                            <a class="button">You</a>
+                            <a class="button">Go</a>
+                        </div>
+                    </div>
+                    <div class="cell medium-6">
+                        <div class="grid-x align-right primary stacked-for-small button-group">
+                            <button type="button" class="button">How</button>
+                            <button type="button" class="button">Low</button>
+                            <button type="button" class="button">Can</button>
+                            <button type="button" class="button">You</button>
+                            <button type="button" class="button">Go</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- classe flèche bas dans même bouton -->
+            <li class="margin-top-2 bordered padding-1">
+                <div class="grid-x align-middle">
+                    <p>
+                        <code style="color: midnightblue; background-color: whitesmoke; ">.dropdown</code>
+                        Flèche vers le bas dans le même bouton
+                    </p>
+                </div>
+                <div class="grid-x">
+
+                </div>
+
+                <div class="grid-x align-middle">
+                    <div class="cell medium-6">
+                        <a class="button dropdown warning" href="#">Flèche bas</a>
+                        <a class="button dropdown alert" href="#">Flèche bas</a>
+                    </div>
+                    <div class="cell medium-6 text-right">
+                        <button type="button" class="button dropdown primary">Primary Flèche bas</button>
+                        <button type="button" class="button dropdown secondary">Secondary</button>
+                    </div>
+                </div>
+            </li>
+            <!-- classe flèche bas dans bouton séparé -->
+            <li class="margin-top-2 bordered padding-1">
+                <div class="grid-x align-middle">
+                    <p>
+                        <code style="color: midnightblue; background-color: whitesmoke; ">.arrow-only</code>
+                        Mettre une flèche vers le bas sur un bouton séparé
+                    </p>
+                </div>
+
+                <div class="grid-x">
+                    <div class="cell medium-6">
+                        <div class="primary button-group">
+                            <a class="button">Primary Action</a>
+                            <a class="dropdown button arrow-only">
+                                <span class="show-for-sr">Show menu</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cell medium-6">
+                        <div class="grid-x align-right primary button-group">
+                            <button type="button" class="dropdown button arrow-only">
+                                <span class="show-for-sr">Show menu</span>
+                            </button>
+                            <button type="button" class="button">Primary Action</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- classe croix de fermeture -->
+            <li class="margin-top-2 bordered padding-1">
+                <div class="grid-x align-middle">
+                    <p>
+                        <code style="color: midnightblue; background-color: whitesmoke; ">.close-button</code>
+                        Croix de fermeture d'une div, avec possibilité d'ajouter un effet
+                    </p>
+                </div>
+
+                <div class="grid-x">
+                    <div class="cell medium-6">
+                        <div class="callout" data-closable>
+                            <a class="close-button" aria-label="Close alert" data-close>
+                                <span aria-hidden="true">&times;</span>
+                            </a>
+                            <p>Look at this close button!</p>
+                        </div>
+                    </div>
+                    <div class="cell medium-6">
+                        <div class="callout" data-closable>
+                            <button class="close-button" aria-label="Close alert" type="button" data-close>
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <p>Look at this close button!</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="grid-x">
+                    <div class="cell medium-6">
+                        <div class="warning callout" data-closable="slide-out-left">
+                            <p>You can close me too, and I close using a Motion UI animation.</p>
+                            <a class="close-button" aria-label="Dismiss alert" data-close>
+                                <span aria-hidden="true">&times;</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cell medium-6">
+                        <div class="warning callout" data-closable="slide-out-right">
+                            <p>You can close me too, and I close using a Motion UI animation.</p>
+                            <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<hr>
+
+
+
+
+
+<!-- Boutons de base de foundation -->
+<div class="grid-container initial">
+    <div class="grid-x">
+        <div class="cell">
+            <h2>Boutons de base de Foundation :</h2>
+            <!-- Anchors (links) -->
+            <a href="about.html" class="button">Learn More</a>
+            <a href="#features" class="button">View All Features</a>
+
+            <!-- Buttons (actions) -->
+            <button type="button" class="success button">Save</button>
+            <button type="button" class="alert button">Delete</button>
+        </div>
+
+        <!-- Dimensions du bouton -->
+        <div class="cell">
+            <a class="button tiny" href="#">So Tiny</a>
+            <a class="button small" href="#">So Small</a>
+            <a class="button" href="#">So Basic</a>
+            <a class="button large" href="#">So Large</a>
+            <a class="button expanded" href="#">Such Expand</a>
+            <a class="button small expanded" href="#">Wow, Small Expand</a>
+        </div>
+
+        <!-- Style en couleur -->
+        <div class="cell">
+            <a class="button primary" href="#">Primary</a>
+            <a class="button secondary" href="#">Secondary</a>
+            <a class="button success" href="#">Success</a>
+            <a class="button alert" href="#">Alert</a>
+            <a class="button warning" href="#">Warning</a>
+        </div>
+
+        <!-- Style creux : class="hollow"-->
+        <div class="cell">
+            <button class="hollow button" href="#">Primary</button>
+            <button class="hollow button secondary" href="#">Secondary</button>
+            <button class="hollow button success" href="#">Success</button>
+            <button class="hollow button alert" href="#">Alert</button>
+            <button class="hollow button warning" href="#">Warning</button>
+            <button class="hollow button" href="#" disabled>Disabled</button>
+        </div>
+
+        <!-- Style désactivé : disabled -->
+        <div class="cell">
+            <a class="button disabled" href="#" aria-disabled>Disabled</a>
+            <button type="button" class="button primary" disabled>Disabled</button>
+            <button type="button" class="button secondary" disabled>Disabled</button>
+            <button type="button" class="button success" disabled>Disabled</button>
+            <button type="button" class="button alert" disabled>Disabled</button>
+            <button type="button" class="button warning" disabled>Disabled</button>
+        </div>
+
+        <!-- Style clair : class="clear"-->
+        <div class="cell">
+            <a class="clear button" href="#">Primary</a>
+            <a class="clear button secondary" href="#">Secondary</a>
+            <a class="clear button success" href="#">Success</a>
+            <a class="clear button alert" href="#">Alert</a>
+            <a class="clear button warning" href="#">Warning</a>
+            <a class="clear button" href="#" disabled>Disabled</a>
+        </div>
+
+        <!-- Avec flèche déroulante : class="dropdown"-->
+        <div class="cell">
+            <button class="dropdown button tiny">Dropdown Button</button>
+            <button class="dropdown button small">Dropdown Button</button>
+            <button class="dropdown button">Dropdown Button</button>
+            <button class="dropdown button large">Dropdown Button</button>
+            <button class="dropdown button expanded $button-color">Dropdown Button</button>
+        </div>
+
+        <!-- Fermeture de fenêtre -->
+        <div class="cell">
+            <button class="button" type="button">
+                <!-- pour lecture d'écran uniquement : "close" -->
+                <span class="show-for-sr">Close</span>
+                <!-- CE qui sera vu par l'utilisateur -->
+                <span aria-hidden="true">X</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    /* REGLES GÉNÉRALES DES BOUTONS */
+    /* Ces règles seront à paramétrer dans la customisation de sass de wp */
+
+
+    /* PERSO */
+    .grid-container {
+        margin-bottom: 3em;
+    }
+
+    .grid-x {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    .initial .cell {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+    .initial .button {
+        margin: 0.2em;
+        border-radius: 0;
+    }
+
+
+    ._3d {
+        margin: 2rem auto;
+        display: flex;
+        justify-content: start-end;
+        font-family: 'Exo';
+        color: #3CC29B;
+        font-size: calc(100vw / 25);
+        letter-spacing: .015em;
+        text-shadow: 0 0 0 #288269,
+            .0025em .0025em 0 #288269,
+            .005em .005em 0 #288269,
+            .0075em .0075em 0 #288269,
+            .01em .01em 0 #288269,
+            .0125em .0125em 0 #288269,
+            .015em .015em 0 #288269,
+            .0175em .0175em 0 #288269,
+            .02em .02em 0 #288269,
+            .0225em .0225em 0 #288269,
+            .025em .025em 0 #288269,
+            .0275em .0275em 0 #288269,
+            .03em .03em 0 #288269,
+            .0325em .0325em 0 #288269,
+            .035em .035em 0 #288269,
+            .0375em .0375em 0 #288269,
+            .04em .04em 0 #288269,
+            .0425em .0425em 0 #288269,
+            .045em .045em 0 #288269,
+            .0475em .0475em 0 #288269,
+            .05em .05em 0 #288269,
+            .0525em .0525em 0 #288269,
+            .055em .055em 0 #288269,
+            .0575em .0575em 0 #288269,
+            .06em .06em 0 #288269,
+            .0625em .0625em 0 #288269,
+            .065em .065em 0 #288269,
+            .0675em .0675em 0 #288269,
+            .07em .07em 0 #288269,
+            .0725em .0725em 0 #288269,
+            .075em .075em 0 #288269,
+            .0775em .0775em 0 #288269,
+            .08em .08em 0 #288269,
+            .0825em .0825em 0 #288269,
+            .085em .085em 0 #288269,
+            .0875em .0875em 0 #288269,
+            .09em .09em 0 #288269,
+            .0925em .0925em 0 #288269,
+            .095em .095em 0 #288269,
+            .0975em .0975em 0 #288269,
+            .1em .1em 0 #288269
+    }
+</style>
+
+<!-- idées
+
+_ mettre un border shadow
+_ mettre une taille figée
+_ mettre un effet au survol
+_ mettre un bouton qui prend la longueur de la div
+_ faire un bouton de fermeture avec une icone pour la croix-->
+
+<!-- Pour commencer
+_ insérer la page bouton dans wp
+_ faire en sorte que les paramètres puissent être gérer avec les variables sass -->
+
+<!-- NOTES au hover
+_ les éléments paramétrables sur un :hover
+    - lumière
+    - couleur sur un bouton sans style -->
